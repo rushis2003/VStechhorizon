@@ -1,0 +1,51 @@
+
+
+.table {
+    width: 80%;
+    margin-bottom: 40px; 
+    margin-left: 270px;
+}
+
+div > h2 {
+    margin-top: 150px;
+    margin-left: 270px;
+}
+
+
+
+/* For devices with width of 1024px and above ( desktops) */
+@media only screen and (min-width: 1025px) {
+    .table {
+        width: 60%; 
+        margin-left: 20%; 
+    }
+
+    div > h2 {
+        margin-left: 20%; 
+    }
+}
+
+/* For tablets (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .table {
+        width: 70%; 
+        margin-bottom: 40px;
+    }
+
+    div > h2 {
+        margin-left: 10%; 
+    }
+}
+
+/* For mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .table {
+        width: 90%; 
+        margin: 10px auto; 
+    }
+
+    div > h2 {
+        margin-left: 5%; 
+        margin-top: 100px; 
+    }
+}

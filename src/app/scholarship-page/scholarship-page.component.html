@@ -1,0 +1,242 @@
+<!-- 
+
+<br>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <title>Scholarships</title>
+</head>
+<body>
+  <br>
+
+<div id="main_div">
+
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img class="modal-title fs-2" id="scholarship_logo" src="assets/images/scholarship_logo.png" alt="scholarship logo">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <br>
+          
+          <label style="font-size: x-large;">Scholarship Name - </label>
+          <br>
+
+          <label style="font-size: x-large;">Award - </label>
+          <br>
+
+          <label style="font-size: x-large;">Description - </label>
+          <br>
+
+          <label style="font-size: x-large;">Eligibility Criteria - </label>
+          <br>
+
+          <label style="font-size: x-large;">Deadline - </label>
+          <br>
+
+          <label style="font-size: x-large;">Contact - </label>
+          <br>
+          <br>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@fat">Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Enter below details..</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Full Name:</label>
+              <input type="text" class="form-control" id="recipient-name" required>
+            </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">College Name:</label>
+              <input type="text" class="form-control" id="recipient-name" required>
+            </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label" >Email:</label>
+              <input type="email" class="form-control" id="recipient-name" required>
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Appy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <h1>Scholarship</h1>
+  <br>
+
+  <h3>Scholarship for Student</h3>
+  <br>
+
+  <button type="button" (click)="current_scholarship_div_visibility_fun()" class="button">Current Scholarship</button>
+  <button type="button" (click)="upcoming_scholarship_div_visibility_fun()" class="button"
+    style="margin-top: 10px;">Upcoming Scholarship</button>
+  <br>
+  <br>
+  <br>
+
+
+
+  <div id="current_scholarship" *ngIf="scholarship_div_visibility_value == 0">
+    <h2
+      style="margin-bottom: 20px; text-align: center; color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">
+      Current Scholarship</h2>
+    <div class="row" style=" overflow: auto; scrollbar-width: none; height: 850px;">
+      <div style="min-width: 355px; max-width: 32%;" *ngFor="let n of ar">
+        <div class="card">
+          <div class="card-body">
+            <div style="display: flex; justify-content:space-between;">
+              <div>
+                <img id="scholarship_logo" src="assets/images/scholarship_logo.png" alt="scholarship logo">
+              </div>
+
+              <div style="background-color: red; color: white;">
+                <h4 class="card-title" style="padding: 10px 10px 0 10px; margin-bottom: 0;"> 16 </h4>
+                <h4 class="card-title" style="padding: 0px 10px 10px 10px; "> days to go </h4>
+              </div>
+            </div>
+            <br>
+            <div style="background-color: white;">
+              <h4 style="text-align: left; color: #353887; padding: 10px 10px 10px 10px; margin-bottom: 10px;">LIFE’S GOOD
+                Scholarship</h4>
+            </div>
+
+            <div class="div_scholarship_data">
+              <div>
+                <h4 style="text-align: left; color: #353887; padding: 10px 10px 0 10px; margin-bottom: 0;">Award</h4>
+                <h5 style="text-align: left; color: black; padding: 0 10px 10px 10px;">Up to 1,00,000</h5>
+              </div>
+              <div>
+                <h4 style="text-align: left; color: #353887; padding: 10px 10px 0 10px; margin-bottom: 0;">Eligibility
+                </h4>
+                <h5 style="text-align: left; color: black; padding: 0 10px 10px 10px;">UG/PG Students</h5>
+              </div>
+            </div>
+            <br>
+
+            <div class="div_viewScholarship">
+              <button class="button" style="margin: 0; height: 50px; width: 360px; text-align: center;" data-bs-toggle="modal" data-bs-target="#exampleModal">View Scholarship</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="upcoming_scholarship" *ngIf="scholarship_div_visibility_value == 1">
+    <h2
+      style="margin-bottom: 20px; text-align: center; color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">
+      Upcoming Scholarship</h2>
+    <div class="row" style=" overflow: auto; scrollbar-width: none; height: 850PX;">
+      <div style="min-width: 355px; max-width: 32%;" *ngFor="let n of ar">
+        <div class="card">
+          <div class="card-body">
+            <div style="display: flex; justify-content:space-between;">
+              <div>
+                <img id="scholarship_logo" src="assets/images/scholarship_logo.png" alt="scholarship logo">
+              </div>
+
+              <div style="background-color:cadetblue; color: white;">
+                <h4 class="card-title" style="padding: 10px 10px 0 10px; margin-bottom: 0;"> ! </h4>
+                <h4 class="card-title" style="padding: 0px 10px 10px 10px; "> Upcoming </h4>
+              </div>
+            </div>
+            <br>
+            <div style="background-color: white;">
+              <h4 style="text-align: left; color: #353887; padding: 10px 10px 10px 10px; margin-bottom: 10px;">LIFE’S GOOD
+                Scholarship</h4>
+            </div>
+
+            <div class="div_scholarship_data">
+              <div>
+                <h4 style="text-align: left; color: #353887; padding: 10px 10px 0 10px; margin-bottom: 0;">Award</h4>
+                <h5 style="text-align: left; color: black; padding: 0 10px 10px 10px;">Up to 1,00,000</h5>
+              </div>
+              <div>
+                <h4 style="text-align: left; color: #353887; padding: 10px 10px 0 10px; margin-bottom: 0;">Eligibility
+                </h4>
+                <h5 style="text-align: left; color: black; padding: 0 10px 10px 10px;">UG/PG Students</h5>
+              </div>
+            </div>
+            <br>
+
+            <div class="div_viewScholarship">
+              <button class="button" style="margin: 0; height: 50px; width: 360px; text-align: center;" data-bs-toggle="modal" data-bs-target="#exampleModal">View Scholarship</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+
+</body>
+</html>
+
+ -->
+
+
+ <app-main-header [class.disabled]="isPopDisabled"></app-main-header>
+ <div class="main" (click)="hidePopup()">
+   <div class="popup" *ngIf="showPopup">
+     <video src="../../assets/img/Scholership exam poster1.mp4" (click)="hidePopup()" autoplay loop></video>
+   </div>
+   <div class="container" [class.disabled]="isPopDisabled">
+     <h1>Exams Details</h1>
+     <p> <b>Secure your future with the VS Tech Horizon Scholarship Exam! Win up to ₹100,000, earn certificates, receive lifetime career guidance, and enjoy Scholar Access for the first 20,000 participants. Register now!</b>
+      <br>
+      <br>
+       <b>Contact Information for Assistance: </b>
+        <br>
+        <br>
+       If you encounter any difficulties or have questions while filling out the form, please feel free to reach out to us for assistance: <br>
+       <br>
+       <b>. Name: </b>VS Tech Horizon Scholarship Support Team <br>
+       <b>. Email:</b> vstechhorizonscholarship@gmail.com <br>
+       <b>. Phone Number:</b> +91 9325360357 <br>
+       <b>. Availability:</b> 8 AM to 10 PM (All Day) <br>
+       <br>
+       We are here to help ensure a smooth registration process. Please don't hesitate to contact us if you need support .<br>
+     </p>
+     <button id="btn" class="btn btn-primary" [routerLink]="'/scholarship-form'">Apply Now</button>
+   </div>
+ </div>
+ <app-chatbot [class.disabled]="isPopDisabled"></app-chatbot>
+<app-whatsapp [class.disabled]="isPopDisabled"></app-whatsapp>
+<app-footer [class.disabled]="isPopDisabled"></app-footer>

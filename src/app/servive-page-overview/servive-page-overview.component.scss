@@ -1,0 +1,99 @@
+.main_div{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1{
+    font-size: 70px;
+    text-align: center;
+    font-family: roboslab;
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+
+.carousel-inner:hover h5 {
+  font-size: 1.5em; 
+  transition: font-size 0.2s ease; 
+  text-shadow: 2px 2px 2px #007BFF;
+}
+.carousel-inner:hover p {
+  font-size: 1.2em; 
+  transition: font-size 0.2s ease; 
+  text-shadow: 2px 2px 2px #007BFF;
+}
+
+.a{
+    margin: 50px;
+    /* background-color: #ffffff;  */
+    border: 1px solid lightgray;
+    height: 400px; 
+    width: 450px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.a:hover{
+    border-radius: 70px;
+    cursor: pointer;
+    transition: border-radius 0.3s ease-in-out; 
+
+}
+
+.a .services_card_heading{
+    margin-top: 10px;
+}
+
+.a h3{
+    /* padding-left: 10px; */
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+.a:hover h3{
+
+    font-size: 2em; 
+    transition: font-size 0.2s ease;
+    /* text-shadow: 2px 2px 2px gray; */
+    text-shadow: 2px 2px 2px #007BFF;
+
+}
+
+
+/* For tablets (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .main_div {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .a {
+        width: 45%;
+        margin: 2.5%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+}
+
+/* For mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .main_div {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .a {
+        width: 100%;
+        margin: 5% 0% 5% 0%;
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}

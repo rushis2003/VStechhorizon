@@ -1,0 +1,69 @@
+<div class="form-container">
+  <form [formGroup]="projectKitBuyForm" (ngSubmit)="onSubmit()"  target="_blank">
+    <h2><b>Buy Project Kit</b></h2>
+    <div>
+      <label for="fullName">Full Name</label>
+      <input id="fullName" formControlName="fullName" (keydown.enter)="moveToNextInput('email')">
+      <div class="error-message" *ngIf="projectKitBuyForm.get('fullName')?.touched && projectKitBuyForm.get('fullName')?.invalid">
+        Full Name is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" (keydown.enter)="moveToNextInput('phoneNumber')">
+      <div class="error-message" *ngIf="projectKitBuyForm.get('email')?.touched && projectKitBuyForm.get('email')?.invalid">
+        Valid Email is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="phoneNumber">Phone Number</label>
+      <input id="phoneNumber" formControlName="phoneNumber" (keydown.enter)="moveToNextInput('address')">
+      <div class="error-message" *ngIf="projectKitBuyForm.get('phoneNumber')?.touched && projectKitBuyForm.get('phoneNumber')?.invalid">
+        Valid Phone Number is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="address">Address</label>
+      <textarea id="address" formControlName="address" (keydown.enter)="moveToNextInput('pincode')"></textarea>
+      <div class="error-message" *ngIf="projectKitBuyForm.get('address')?.touched && projectKitBuyForm.get('address')?.invalid">
+        Address is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="pincode">Pincode</label>
+      <input id="pincode" formControlName="pincode" (keydown.enter)="moveToNextInput('kit')">
+      <div class="error-message" *ngIf="projectKitBuyForm.get('pincode')?.touched && projectKitBuyForm.get('pincode')?.invalid">
+        Valid Pincode is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="kit">Kit</label>
+      <select id="kit" formControlName="kit" (keydown.enter)="moveToNextInput('quantity')">
+        <option *ngFor="let kit of kits" [value]="kit">{{ kit }}</option>
+      </select>
+      <div class="error-message" *ngIf="projectKitBuyForm.get('kit')?.touched && projectKitBuyForm.get('kit')?.invalid">
+        Selecting a Kit is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="quantity">Quantity</label>
+      <input id="quantity" type="number" formControlName="quantity" min="1" (keydown.enter)="moveToNextInput('additionalRequests')">
+      <div class="error-message" *ngIf="projectKitBuyForm.get('quantity')?.touched && projectKitBuyForm.get('quantity')?.invalid">
+        Quantity must be at least 1.
+      </div>
+    </div>
+  
+    <div>
+      <label for="additionalRequests">Additional Requests</label>
+      <textarea id="additionalRequests" formControlName="additionalRequests"></textarea>
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>
+  </div>

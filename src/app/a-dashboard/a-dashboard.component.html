@@ -1,0 +1,89 @@
+<div class="main-content">
+  <app-a-header></app-a-header>
+</div>
+<div Class="dashboard-container">
+  <h1>Dashboard</h1>
+  <div class="stats-container">
+    <div class="stat-card-1">
+      <div class="stat-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+          <path d="M64 0C28.7 0 0 28.7 0 64V416c0 35.3 28.7 64 64 64H80l16 32h64l16-32H400l16 32h64l16-32h16c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM224 320a80 80 0 1 0 0-160 80 80 0 1 0 0 160zm0-240a160 160 0 1 1 0 320 160 160 0 1 1 0-320zM480 221.3V336c0 8.8-7.2 16-16 16s-16-7.2-16-16V221.3c-18.6-6.6-32-24.4-32-45.3c0-26.5 21.5-48 48-48s48 21.5 48 48c0 20.9-13.4 38.7-32 45.3z"/>
+        </svg>
+      </div>
+      <div class="stat-text">
+        <div class="stat-value">{{ buyKitCount }}</div>
+        <div  class="stat-name">Buy Kit</div>
+      </div>
+
+    </div>
+    <div class="stat-card-2">
+      <div class="stat-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/>
+        </svg>
+      </div>
+      <div class="stat-text">
+        <div class="stat-value">{{ subscribersCount }}</div>
+        <div class="stat-name">Subscribers</div>
+      </div>
+    </div>
+    <div class="stat-card-3">
+      <div class="stat-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z" />
+        </svg>
+      </div>
+      <div class="stat-text">
+        <div class="stat-value">{{ contactUsCount }}</div>
+        <div class="stat-name">Contact Us</div>
+      </div>
+    </div>
+    <div class="stat-card-4">
+      <div class="stat-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z" />
+        </svg>
+      </div>
+      <div class="stat-text">
+        <div class="stat-value">{{ scholarshipCount }}</div>
+        <div class="stat-name">Scholarship</div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+<div Class="popup-settings-container">
+  <h2>Popup Settings</h2>
+  <div class="popup-sub">
+    <div class="inline-label">
+      <label>Show Popup:</label>
+      <input type="checkbox" class="popup-settings-checkbox" [(ngModel)]="showPopup">
+    </div>
+    <label class="side">
+      Popup Type:
+      <select class="popup-settings-select" [(ngModel)]="popupType">
+        <option value="text">Text</option>
+        <option value="image">Image</option>
+      </select>
+    </label>
+    <div *ngIf="popupType === 'text'">
+      <label class="side">
+        Popup Content:
+        <textarea class="popup-settings-textarea" [(ngModel)]="popupContent"></textarea>
+      </label>
+    </div>
+    <div *ngIf="popupType === 'image'">
+      <label class="side">
+        Image URL:
+        <input type="url" class="popup-settings-input" [(ngModel)]="imageUrl">
+      </label>
+    </div>
+  </div>
+  <button class="save-settings-button" (click)="savePopupSettings()">Save Settings</button>
+</div>

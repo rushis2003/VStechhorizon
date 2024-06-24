@@ -1,0 +1,47 @@
+button {
+  background-color: green; 
+  border-radius: 50%; 
+  width: 60px; 
+  height: 60px; 
+  border: none;
+  cursor: pointer;
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 1000;
+}
+
+button img {
+  width: 100%;
+  height: auto;
+}
+
+/* For devices with width of 1024px and above (like desktops) */
+@media only screen and (min-width: 1025px) {
+  button {
+    width: 70px; 
+    height: 70px;
+    bottom: 30px; 
+    right: 30px; 
+  }
+}
+
+/* For tablets (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  button {
+    width: 60px; 
+    height: 60px;
+    bottom: 25px; 
+    right: 25px; 
+  }
+}
+
+/* For mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+  button {
+    width: 50px; 
+    height: 50px;
+    bottom: 15px; 
+    right: 15px; 
+  }
+}

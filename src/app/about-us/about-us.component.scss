@@ -1,0 +1,163 @@
+.container {
+
+    width: 100%;
+    padding-top: 0;
+    margin-top: 100px;
+    border-radius: 50px;
+    height: 600px;
+    border: 1px solid #007bff;
+    box-shadow: 0px 0px 10px;
+    transition: transform 0.3s ease;
+}
+.container:hover{
+    transform: scale(1.05);
+}
+#title {
+    width: 100%;
+    height: 80px;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    margin-top: 40px;
+}
+
+.container-sub1 {
+    display: flex;
+    margin-top: 50px;
+    height: auto;
+    margin-left: 5%;
+    margin-right: 5px;
+}
+
+#support-message {
+    width: 100%;
+    color: black;
+    font-size: 20px;
+    margin-top: 3%;
+    margin-right: 20px;
+    text-align: justify;
+    padding-right: 40px;
+}
+
+#education-img img {
+    margin-left: -1%;
+
+    height: 350px;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* For devices with width of 1024px and above (like desktops) */
+@media only screen and (min-width: 1025px) {}
+
+/* For tablets (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #title {
+        font-size: 50px;
+        margin-top: 50px;
+    }
+
+    .container-sub1 {
+        flex-direction: column;
+        margin-left: 5%;
+        margin-top: 50px;
+    }
+
+    #support-message {
+        font-size: 16px;
+
+    }
+
+    #education-img img {
+        margin-left: 0;
+        height: 300px;
+        width: 100%;
+    }
+
+    .container-sub2 {
+        margin-left: 10%;
+        font-size: 18px;
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .container {
+        height: 750px; /* Adjust height as needed for content */
+        width: 90%;
+        margin-bottom: 40px; /* Example margin-bottom adjustment */
+       
+    }
+
+    #title {
+        font-size: 35px; /* Adjust font size for smaller screens */
+        margin-top: 40px; /* Example margin adjustment */
+    }
+
+    #support-message {
+        font-size: 13px; 
+        padding: 0;
+        
+    }
+
+    .container-sub1 {
+        flex-direction: column; /* Stack items vertically */
+        margin-left: 5%;
+        margin-top: 0px; /* Example margin adjustment */
+        height: 100px; /* Example height adjustment */
+    }
+
+    #education-img img {
+        margin-left: 0;
+        height: auto; /* Ensure image adjusts proportionally */
+        width: 100%;
+        margin-bottom: 0; /* Example margin adjustment */
+    }
+
+    br {
+        display: none; /* Hide <br> elements on smaller screens if needed */
+    }
+
+    /* Additional styles specific to screens <= 767px can be added here */
+}
+
+
+/* For small mobile devices */
+// @media (max-width: 480px) {
+//     .container {
+//         height: 100%;
+//         width: 100%;
+//         margin-bottom: 40px;
+//     }
+
+//     #title {
+//         font-size: 35px;
+//         margin-top: 60px;
+//     }
+
+//     #support-message {
+//         font-size: 13px;
+       
+//     }
+
+//     .container-sub1 {
+//         flex-direction: column;
+//         margin-left: 5%;
+//         margin-top: 0px;
+//         height: 100px;
+//     }
+
+//     #education-img img {
+//         margin-left: 0;
+//         height: auto;
+//         width: 100%;
+//         margin-bottom: 0;
+//     }
+
+//     br {
+//         display: none;
+//     }
+// }

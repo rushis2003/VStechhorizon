@@ -1,0 +1,115 @@
+#appliaction-form-container{
+    width: 40%;
+    height: auto;
+    margin-left: 30%;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    border: 1px solid;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    
+    
+
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+#appliaction-form-title{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    font-size: 30px;
+}
+
+#app-application-content{
+    margin-left: 90px;
+}
+
+
+.input-field {
+    width: 80%; 
+    height: 40px;
+    border-radius: 5px;
+}
+
+#position{
+    width: 410px;
+    height: 46px;
+    border-radius: 5px;
+    border: 2px solid;
+
+}
+
+#resume{
+    width: 300px;
+}
+
+#btn-div{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 70px;
+    width: 450px;
+}
+#btn{
+    background-color: #007BFF;
+    color: white;
+    width: 150px;
+    height: 40px;
+    
+}
+
+label{
+    font-size: 18px;
+}
+
+/* For tablets (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #appliaction-form-container {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    #app-application-content {
+        margin-left: 5%;
+    }
+
+    .input-field, #position, #resume {
+        width: 95%;
+    }
+
+    #btn-div {
+        width: 100%;
+    }
+}
+
+/* For mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+    #appliaction-form-container {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #app-application-content {
+        margin-left: 5%;
+    }
+
+    #appliaction-form-title {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .input-field, #position, #resume {
+        width: 80%;
+    }
+
+    #btn-div {
+        width: 100%;
+    }
+
+    #btn {
+        width: 80%;
+    }
+}

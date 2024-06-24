@@ -1,0 +1,220 @@
+#project-container {
+  width: 90%;
+  height: auto;
+  margin-left: 6%;
+}
+
+#pro-hed {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 80px;
+  height: 80px;
+  font-size: 65px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Project-odd,
+#Project-even {
+  height: auto;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 50px;
+  padding-top: 80px;
+  border: 1px solid #007bff;
+  box-shadow: 0px 0px 10px;
+  transition: transform 0.3s ease;
+  background-color: #007bff;
+
+}
+
+#Project-odd:hover,
+#Project-even:hover {
+  transform: scale(1.05);
+}
+
+#pro-odd-cont,
+#pro-even-cont {
+  height: auto;
+  width: 70%;
+  margin-left: 15%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 65px;
+}
+
+#project-odd-tit,
+#project-even-tit {
+  height: auto;
+  width: 50%;
+  padding: 20px;
+  color: white;
+}
+#project-odd-tit > p,
+#project-even-tit > p{
+
+text-align: justify;
+text-align-last:justify ;
+
+}
+
+#project-odd-img,
+#project-even-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+#project-odd-img img,
+#project-even-img img {
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+#project-odd-tit h3,
+#project-even-tit h3 {
+  font-size: 30px;
+}
+
+#project-odd-tit p,
+#project-even-tit p {
+  font-size: 18px;
+}
+
+
+/* For very large screens (like 2905px width) */
+@media only screen and (min-width: 2905px) {
+  #project-container {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  #pro-hed {
+    font-size: 100px;
+    height: 120px;
+  }
+
+  #Project-odd,
+  #Project-even {
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 70px;
+    padding-top: 120px;
+    border: 2px solid #007bff;
+    box-shadow: 0px 0px 20px;
+  }
+
+  #pro-odd-cont,
+  #pro-even-cont {
+    width: 70%;
+    margin-left: 15%;
+  }
+
+  #project-odd-tit,
+  #project-even-tit {
+    padding: 40px;
+  }
+
+  #project-odd-img,
+  #project-even-img {
+    justify-content: flex-start;
+  }
+
+  #project-odd-img img,
+  #project-even-img img {
+    width: 450px;
+  }
+
+  #project-odd-tit h3,
+  #project-even-tit h3 {
+    font-size: 40px;
+  }
+
+  #project-odd-tit p,
+  #project-even-tit p {
+    font-size: 22px;
+  }
+}
+
+/* For tablets (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #pro-hed {
+    font-size: 50px;
+  }
+
+  #Project-odd,
+  #Project-even {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  #pro-odd-cont,
+  #pro-even-cont {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  #project-odd-img img,
+  #project-even-img img {
+    width: 200px;
+  }
+}
+
+/* For mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+
+  #pro-odd-cont,
+  #pro-even-cont {
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #project-odd-tit,
+  #project-even-tit {
+    width: 100%;
+    order: 2;
+    // text-align: center;
+    margin-top: 20px;
+  }
+
+  #project-odd-img,
+  #project-even-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    order: 1;
+  }
+
+  #project-odd-img img,
+  #project-even-img img {
+    width: 250px;
+    height: 150px;
+  }
+
+  #pro-hed {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  #Project-odd,
+  #Project-even {
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 20px;
+  }
+  #project-odd-tit > p,
+  #project-even-tit > p{
+  
+  text-align: left;
+  
+  
+  }
+}

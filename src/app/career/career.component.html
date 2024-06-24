@@ -1,0 +1,58 @@
+<!-- <app-header></app-header> -->
+<app-main-header>
+</app-main-header>
+
+
+ 
+  <div id="container">
+    <div id="sub-container1">
+      <div id="career-message">
+        <span> Are you considering a new career path?</span>
+
+        <p> At VS Tech Horizon, we value our team as the driving force behind our success. We're on the lookout for
+          talented
+          individuals who share our passion for innovation and client satisfaction. <br><br><br>
+
+          Our culture is all about empowering employees to think creatively and take on leadership roles. While there's
+          no
+          rigid 'VS Tech Way,' we do prioritize delivering exceptional client service. <br><br><br>
+
+          If you're looking for a workplace where your ideas matter and where you can truly make a difference, consider
+          joining us at VS Tech Horizon. Check out our current openings and be part of our exciting journey into the
+          future
+          of technology!
+        </p>
+      </div>
+
+      <div>
+        <img src="../../assets/image/we-are-hiring.jpg" alt="">
+      </div>
+    </div>
+
+    <div id="sub-container2">
+      Current Openings
+    </div>
+    <div *ngIf="jobOpenings && jobOpenings.length > 0">
+    <div id="sub-container3">
+      <div class="current-opening" *ngFor="let job of jobOpenings">
+        <h3>{{job.title}}</h3>
+        <p>{{job.experienceLevel}}</p>
+        <p>{{job.jobLocation}}</p><br>
+        <a [routerLink]="['/job-description', job.id]">
+          <p>Read more</p>
+        </a>
+      </div>
+    </div>
+
+    <div id="apply-now">
+      <button id="apply-now-btn" [routerLink]="'/application-form'">Apply Now</button>
+    </div>
+  </div>
+  <div *ngIf="!jobOpenings || jobOpenings.length === 0" id="noJobAvalabe">
+    <p>No job openings available at the moment.</p>
+  </div>
+  </div>
+  <app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+  <app-footer></app-footer>
+

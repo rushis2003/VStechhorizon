@@ -1,0 +1,207 @@
+header {
+  background-color: black;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 0px);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  color: white;
+  flex-grow: 1; 
+  margin-left: 350px;
+ 
+}
+
+header .dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+header .dropdown .dropbtn {
+  background-color: blue;
+  color: black;  
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 40px;
+  border-radius: 50%;
+}
+span{
+  color: whitesmoke;
+  margin-right: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+header .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 0;
+  left: 40px;  
+  right: auto; 
+  top: 100%;  
+  
+}
+
+header .dropdown-content a {
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+  
+}
+
+header .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+header .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header .dropdown:hover .dropbtn {
+  background-color: whitesmoke;
+}
+
+
+.sidebar {
+  height:  calc(100% - 60px);
+  width: 0;
+  position: fixed;
+  z-index: 1001;
+  top: 60px;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: width 0.5s; 
+  
+}
+
+
+
+.sidebar-open {
+  width: 250px;
+}
+
+.sidebar a {
+  // padding: 8px 8px 8px 25px;
+  // text-decoration: none;
+  // font-size: 25px;
+  // color: #818181;
+  // display: block;
+  // transition: 0.3s;
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  background-color: #495057;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  margin-left: -20px;
+}
+
+.sidebar a:hover {
+  background-color: #6c757d;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.fas {
+  // margin-right: 10px;
+  width: 10px;
+}
+#vs-img {
+  margin-left: 10px;
+  // margin: 10px;
+  height: 40px; /* Adjust as needed */
+  width: 200px;
+}
+
+ul{
+  margin-top: 20px;
+}
+li{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* For devices with width of 1024px and above (like desktops) */
+@media only screen and (min-width: 1025px) {
+  header h1 {
+    margin-left: 350px;
+  }
+}
+
+/* For tablets (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header h1 {
+    margin-left: 20px;
+  }
+
+  .sidebar {
+    width: 250px;
+    top: 60px;
+  }
+
+  .sidebar-open {
+    width: 250px;
+  }
+}
+
+/* For mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+  header h1 {
+    font-size: 18px;
+    margin-left: 20px;
+  }
+
+  header .menu-btn {
+    font-size: 24px;
+  }
+
+  #vs-img {
+    height: 30px;
+    width: 100px;
+  }
+
+  .sidebar {
+    width: 0%;
+    top: 60px;
+    margin-top: 5px;
+  }
+
+  .sidebar-open {
+    width: 30%;
+  }
+
+  .sidebar a {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  header .dropdown .dropbtn {
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+  }
+
+  header .dropdown .dropdown-content {
+    left: 30px;
+  }
+}

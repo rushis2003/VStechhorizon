@@ -1,0 +1,123 @@
+<app-main-header></app-main-header>
+<div class="container">
+  <h1>Payment Details</h1>
+  <div class="details">
+    <h3>Bank Account details</h3>
+    <div>
+      Account Name: VS TECH HORIZON PRIVATE LIMITED
+    </div>
+    <div>
+      Branch Name: State Bank of India, Wagholi
+    </div>
+    <div>
+      Account No: 00000042992398554
+    </div>
+    <div>
+      IFSC Code: SBIN0013258
+    </div>
+    <div>
+      UPI Id: <span (click)="copyUPIId()" style="cursor: pointer;">7744831533@sbi</span>
+    </div>
+    <p class="fee">Registration fee: 999/-</p>
+  </div>
+
+  <h3>Scan the QR code</h3>
+  <p>vstechhorizon HR</p>
+  <img src="../../assets/img/qrcode1.jpg" alt="QR Code">
+  <div>
+    <label for="transactionId">Transaction ID:</label>
+    <input type="text" id="transactionId" [(ngModel)]="transactionId" (input)="checkFormValidity()"
+      class="form-control">
+  </div>
+  <div>
+    <label for="screenshot">Upload Screenshot:</label>
+    <input type="file" id="screenshot" (change)="onFileChange($event)" class="form-control">
+  </div>
+  <button class="btn btn-primary" [disabled]="!formValid" (click)="submitPayment()">Submit</button>
+</div>
+
+<!-- Popup Dialog -->
+<div id="popupDialog" class="popup-dialog" style="display: none;">
+  <div class="popup-content">
+    <h1>Scholarship Registration Received</h1>
+    <p>Thank you for registering.</p>
+    <p>We have received your payment details. Your registration will be confirmed once we verify your transaction ID.
+    </p>
+    <p>Our team is reviewing your payment. This process typically takes 2-3 business days. We will notify you via email
+      once confirmed.</p>
+    <p>Thank you for Registering.</p>
+    <button class="btn-3 btn-primary" (click)="closePopup()">OK</button>
+       
+  </div>
+</div>
+<app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer>
+
+
+
+<!-- 
+<app-main-header></app-main-header>
+<div class="container">
+    <h1>Payment Details</h1>
+    <h3>Bank Account Details</h3>
+    <form #paymentForm="ngForm" (ngSubmit)="submitPayment(paymentForm)">
+        <div>
+            <label for="bank">Bank Name:</label>
+            <input type="text" id="bank" name="bank" [(ngModel)]="bank" required class="form-control" #bankField="ngModel">
+            <div *ngIf="bankField.invalid && bankField.touched" class="text-danger">
+                Bank name is required.
+            </div>
+        </div>
+        <div>
+            <label for="branch">Branch Name:</label>
+            <input type="text" id="branch" name="branch" [(ngModel)]="branch" required class="form-control" #branchField="ngModel">
+            <div *ngIf="branchField.invalid && branchField.touched" class="text-danger">
+                Branch name is required.
+            </div>
+        </div>
+        <div>
+            <label for="account">Account No:</label>
+            <input type="text" id="account" name="account" [(ngModel)]="account" required pattern="^[0-9]{11,16}$" class="form-control" #accountField="ngModel">
+            <div *ngIf="accountField.invalid && accountField.touched" class="text-danger">
+                <div *ngIf="accountField.errors && accountField.errors['required']">Account number is required.</div>
+                <div *ngIf="accountField.errors && accountField.errors['pattern']">Account number must be between 11 and 16 digits.</div>
+            </div>
+        </div>
+        <div>
+            <label for="ifsc">IFSC Code:</label>
+            <input type="text" id="ifsc" name="ifsc" [(ngModel)]="ifsc" required class="form-control" #ifscField="ngModel">
+            <div *ngIf="ifscField.invalid && ifscField.touched" class="text-danger">
+                IFSC code is required.
+            </div>
+        </div>
+        <div>
+            <label for="upi">UPI Id:</label>
+            <input type="text" id="upi" name="upi" [(ngModel)]="upi" required class="form-control" #upiField="ngModel">
+            <div *ngIf="upiField.invalid && upiField.touched" class="text-danger">
+                UPI ID is required.
+            </div>
+        </div>
+        <h3>Scan the QR code</h3>
+        <img src="../../assets/img/qrcode.svg" alt="QR Code">
+        <div>
+            <label for="transactionId">Transaction ID:</label>
+            <input type="text" id="transactionId" name="transactionId" [(ngModel)]="transactionId" required class="form-control" #transactionIdField="ngModel">
+            <div *ngIf="transactionIdField.invalid && transactionIdField.touched" class="text-danger">
+                Transaction ID is required.
+            </div>
+        </div>
+        <div>
+            <label for="screenshot">Upload Screenshot:</label>
+            <input type="file" id="screenshot" (change)="onFileChange($event)" required class="form-control">
+            <div *ngIf="screenshotInvalid" class="text-danger">
+                Screenshot is required.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!paymentForm.valid || screenshotInvalid">Submit</button>
+    </form>
+</div>
+<app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer>
+ -->

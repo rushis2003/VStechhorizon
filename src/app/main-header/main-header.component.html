@@ -1,0 +1,36 @@
+
+
+   <header class="fixed-navbar">
+    <nav>
+      <div class="box-header">
+        <div class="navbar">
+          <img [routerLink]="['/']" src="../../assets/image/vs tech logo.png" alt="Logo" width="200" style="margin-left: 20px; margin-top: 5px;">
+          <div class="hamburger" (click)="toggleMenu()">
+            &#9776; 
+          </div>
+          <div class="nav-links" [class.show]="isMenuOpen">
+            <a class="anchor" [routerLink]="'/'">Home</a>
+            <a class="anchor"(click)="scrollToSection('services')">Services</a>
+            <!-- Projects dropdown -->
+            <div class="dropdown">
+              <button class="dropbtn" (click)="toggleDropdown()">Projects</button>
+              <div class="dropdown-content" [class.show]="isDropdownOpen">
+                <a [routerLink]="'/it'">IT</a>
+                <a [routerLink]="'/iot'">IOT</a>
+                <a [routerLink]="'/ai-ml'">AI/ML</a>
+                <a [routerLink]="'/robotics'">Robotics</a>
+              </div>
+            </div>
+            <a class="anchor" [routerLink]="'/scholarship'">Scholarships</a>
+            <a class="anchor"[routerLink]="'/steam'">STEAM</a>
+            <a class="anchor"(click)="scrollToSection('course')">Courses</a>
+            <a class="anchor" [routerLink]="'/aboutus'">About</a>
+            <a class="anchor"[routerLink]="'/form'">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  
+  

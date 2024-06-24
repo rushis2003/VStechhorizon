@@ -1,0 +1,29 @@
+
+
+
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    text-align: left;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  header {
+    width: 100%;
+    left: 0;
+  }
+}

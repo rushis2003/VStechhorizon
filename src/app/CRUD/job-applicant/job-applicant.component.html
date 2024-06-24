@@ -1,0 +1,49 @@
+<app-a-header></app-a-header>
+
+<div>
+  <h2>Job Applicant Details</h2>
+</div>
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th>Position</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email ID</th>
+      <th>Contact Number</th>
+      <th>Alternate Contact Number</th>
+      <th>Date of Birth</th>
+      <th>Linkdin Profile Link</th>
+      <th>Current/Previous Company</th>
+      <th> Total Experience</th>
+      <th>Relevant Work Experience</th>
+      <th>Current CTC</th>
+      <th>Expected CTC</th>
+      <th>Notice Period</th>
+      <th>Resume</th>
+      <th>Submit Date & Time</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let applicationDetail of applicationDetails">
+      <!-- <th>{{applicationDetail.applicationId}}</th> -->
+      <td>{{applicationDetail.position}}</td>
+      <td>{{applicationDetail.firstName}}</td>
+      <td>{{applicationDetail.lastName}}</td>
+      <td>{{applicationDetail.email}}</td>
+      <td>{{applicationDetail.contactNumber}}</td>
+      <td>{{applicationDetail.alternateContactNumber}}</td>
+      <td>{{applicationDetail.dob}}</td>
+      <td>{{applicationDetail.linkedin}}</td>
+      <td>{{applicationDetail.currentCompany}}</td>
+      <td>{{applicationDetail.totalExperience}}</td>
+      <td>{{applicationDetail.relevantExperience}}</td>
+      <td>{{applicationDetail.currentCTC}}</td>
+      <td>{{applicationDetail.expectedCTC}}</td>
+      <td>{{applicationDetail.noticePeriod}}</td>
+      <td><a href="http://192.168.0.3:3006{{applicationDetail.resume}}">View</a></td>
+      <td>{{applicationDetail.submitDate}}</td>
+    </tr>
+  </tbody>
+</table>

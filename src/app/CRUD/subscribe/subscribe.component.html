@@ -1,0 +1,20 @@
+<app-a-header></app-a-header>
+<div>
+    <h2>Subscribe Information</h2>
+</div>
+<table class="table table-bordered">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Sr.No</th>
+            <th scope="col">Email</th>
+            <th scope="col">Submit Date & Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let subscribe of subscribeData">
+            <td>{{subscribe.subscribeId}}</td>
+            <td>{{subscribe.email}}</td>
+            <td>{{subscribe.submitDate}}</td>
+        </tr>
+    </tbody>
+</table>

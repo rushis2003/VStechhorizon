@@ -1,0 +1,211 @@
+<!-- <app-main-header></app-main-header>
+<div class="container">
+    <h1 style="margin-top: 80px;">Welcome to Our STEAM Program!</h1>
+    <p class="headline">"Our program blends arts with STEM to enhance creativity and skills. We offer camps and workshops for students of 1st standard to college, focusing on the latest technology to inspire and prepare future innovators."</p>
+    
+    <h2 id="project-info-title" class="project-info-title">Explore Our Projects and Kits</h2>
+    
+    <nav class="group-buttons">
+        <button *ngFor="let group of groups" (click)="selectGroup(group); scrollToProjects()">{{ group.name }}</button>
+    </nav>
+    
+    <div *ngIf="selectedGroup" id="project-details">
+        <h2>{{ selectedGroup.name }}</h2>
+        <div *ngFor="let project of selectedGroup.projects" class="project-card">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>{{ project.name }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="project-content">
+                        <img class="project-image" [src]="project.image" alt="{{ project.name }}">
+                        <div class="project-details">
+                            <p class="project-description">{{ project.description }}</p>
+                            <p style="font-size: 18px;"><strong>Steps to Implement:</strong></p>
+                            <div *ngIf="!project.expanded">
+                                <p class="shortsteps">{{ project.shortSteps }}</p>
+                            </div>
+                            <div *ngIf="project.expanded">
+                                <div class="fullsteps" [innerHTML]="formatSteps(project.fullSteps)"></div>
+                            </div>
+                            <mat-card-actions>
+                                <button mat-button class="read-more-button" (click)="project.expanded = !project.expanded">
+                                    {{ project.expanded ? 'Read less' : 'Read more' }}
+                                </button>
+                            </mat-card-actions>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    
+                    <a href="assets/pdfs/STEAM CONNECT REPORT.pdf" download>Download Project Kit PDF</a>
+
+                    <button class="buy-kit-button" mat-button (click)="buyKit(project)">Buy Kit</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+    
+    
+    
+    <h2 style="color: black;">Why Choose Our STEAM Program?</h2>
+    <div class="container-2">
+        <div class="chart-grid">
+            <div class="chart-item">
+                <div class="icon">📚</div>
+                <div class="content">
+                    <span class="title">Interactive Learning:</span>
+                    <p>We believe in learning by doing. Our workshops and camps are designed to be highly interactive, encouraging students to engage directly with the material.</p>
+                </div>
+            </div>
+            <div class="chart-item">
+                <div class="icon">👩‍🏫</div>
+                <div class="content">
+                    <span class="title">Expert Instructors:</span>
+                    <p>Our programs are led by industry experts and experienced educators who are passionate about teaching and mentoring the next generation.</p>
+                </div>
+            </div>
+            <div class="chart-item">
+                <div class="icon">🔧</div>
+                <div class="content">
+                    <span class="title">State-of-the-Art Equipment:</span>
+                    <p>We provide access to the latest tools and technologies, including advanced electronics kits, microcontrollers, and software used in professional settings.</p>
+                </div>
+            </div>
+            <div class="chart-item">
+                <div class="icon">🎨</div>
+                <div class="content">
+                    <span class="title">Creativity and Innovation:</span>
+                    <p>By incorporating the arts into our STEM curriculum, we encourage students to think creatively and approach problems from multiple perspectives.</p>
+                </div>
+            </div>
+            <div class="chart-item">
+                <div class="icon">🚀</div>
+                <div class="content">
+                    <span class="title">Career Preparation:</span>
+                    <p>Our programs are designed to give students a head start in their academic and professional careers by equipping them with the skills needed in today's tech-driven world.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-3">
+        <h2>Upcoming Technologies Covered</h2>
+        <ul class="container-3 technologies-list">
+        <li *ngFor="let technology of upcomingTechnologies">{{ technology }}</li>
+        </ul>
+      </div>
+        <h2>How to Order Project kits</h2>
+        <button class="btn-contact-us" [routerLink]="'/projectKitBuyForm'">Buy Kit</button>
+        <p style="text-align: center;">Join us in exploring the exciting world of STEAM and prepare to make your mark on the future!</p>
+     </div>   
+<br><br><br><br><br><br><br><br>
+<app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer> -->
+
+
+
+<app-main-header></app-main-header>
+<div class="container">
+    <h1 x>Welcome to Our STEAM CONNECT Program!</h1>
+    <p class="headline">"Our program blends arts with STEM to enhance creativity and skills. We offer camps and workshops for students of 1st standard to college, focusing on the latest technology to inspire and prepare future innovators."</p>
+    
+    <h2 id="project-info-title" class="project-info-title">Explore Our Projects and Kits</h2>
+    
+    <nav class="group-buttons">
+        <button *ngFor="let group of groups" (click)="selectGroup(group); scrollToProjects()">{{ group.name }}</button>
+    </nav>
+    <!-- <h2>How to Order Project kits</h2>
+        <button class="btn-buy-kit" [routerLink]="'/projectKitBuyForm'">Buy Kit</button> -->
+        <p style="text-align: center;">Join us in exploring the exciting world of STEAM and prepare to make your mark on the future!</p>
+    <div *ngIf="selectedGroup" id="project-details">
+        <h2>{{ selectedGroup.name }}</h2>
+        <div *ngFor="let project of selectedGroup.projects" class="project-card">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>{{ project.name }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="project-content">
+                        <img class="project-image" [src]="project.image" alt="{{ project.name }}">
+                        <div class="project-details">
+                            <p class="project-description">{{ project.description }}</p>
+                            <p style="font-size: 18px;"><strong>Steps to Implement:</strong></p>
+                            <div *ngIf="!project.expanded">
+                                <p class="shortsteps">{{ project.shortSteps }}</p>
+                            </div>
+                            <div *ngIf="project.expanded">
+                                <div class="fullsteps" [innerHTML]="formatSteps(project.fullSteps)"></div>
+                            </div>
+                            <mat-card-actions>
+                                <button mat-button class="read-more-button" (click)="project.expanded = !project.expanded">
+                                    {{ project.expanded ? 'Read less' : 'Read more' }}
+                                </button>
+                            </mat-card-actions>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <!-- <a [href]="{{ project.pdf }}" download>Download Project Kit PDF</a> -->
+                    <a href="/assets/pdfs/STEAM CONNECT REPORT.pdf" download>Download Project Kit PDF</a>
+                    <button class="btn-buy-kit" mat-button (click)="buyKit(project)">Buy Kit</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+    
+    
+    
+    <h2 style="color: black;">Why Choose Our STEAM Program?</h2>
+    <div class="container-2">
+        <div class="chart-grid">
+            <div class="chart-item">
+                <div class="icon">📚</div>
+                <div class="content">
+                    <span class="title">Interactive Learning:</span>
+                    <p>We believe in learning by doing. Our workshops and camps are designed to be highly interactive, encouraging students to engage directly with the material.</p>
+                </div>
+            </div>
+            <div class="chart-item">
+                <div class="icon">👩‍🏫</div>
+                <div class="content">
+                    <span class="title">Expert Instructors:</span>
+                    <p>Our programs are led by industry experts and experienced educators who are passionate about teaching and mentoring the next generation.</p>
+                </div>
+            </div>
+            <div class="chart-item">
+                <div class="icon">🔧</div>
+                <div class="content">
+                    <span class="title">State-of-the-Art Equipment:</span>
+                    <p>We provide access to the latest tools and technologies, including advanced electronics kits, microcontrollers, and software used in professional settings.</p>
+                </div>
+            </div>
+            <div class="chart-item">
+                <div class="icon">🎨</div>
+                <div class="content">
+                    <span class="title">Creativity and Innovation:</span>
+                    <p>By incorporating the arts into our STEM curriculum, we encourage students to think creatively and approach problems from multiple perspectives.</p>
+                </div>
+            </div>
+            <div class="chart-item">
+                <div class="icon">🚀</div>
+                <div class="content">
+                    <span class="title">Career Preparation:</span>
+                    <p>Our programs are designed to give students a head start in their academic and professional careers by equipping them with the skills needed in today's tech-driven world.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-3">
+        <h2>Upcoming Technologies Covered</h2>
+        <ul class="container-3 technologies-list">
+        <li *ngFor="let technology of upcomingTechnologies">{{ technology }}</li>
+        </ul>
+    </div>
+</div>   
+<br><br><br><br><br><br><br><br>
+<app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer>

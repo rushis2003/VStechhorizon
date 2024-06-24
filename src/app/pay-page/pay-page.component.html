@@ -1,0 +1,21 @@
+<app-main-header ></app-main-header >
+
+    <div class="container">
+        <img src="../../assets//img/logo.jpeg"  alt="Company Logo" class="company-logo" />
+        <h1>Exam Details</h1>
+        <p><strong>Exam Fees:</strong> 1000</p>
+      <p>Exam Duration: 1 hour</p>
+        <!-- <div class="form-group">
+          <label for="examDuration">Exam Duration:</label>
+          <input id="examDuration" type="text"  placeholder="Enter Exam Duration" />
+        </div> -->
+        <button class="btn btn-primary" [routerLink]="'/scholarship-form'">Back</button>
+        <button class="btn btn-primary" [routerLink]="'/term-condition'">Term & Condition</button>
+        <!-- <label class="form-control">
+          <input type="checkbox" [(ngModel)]="termsAccepted" (click)="handleTermsClick($event)"> I accept all the terms & conditions
+      </label> -->
+      </div>
+    
+      <app-chatbot></app-chatbot>
+    <app-whatsapp></app-whatsapp>
+    <app-footer ></app-footer>

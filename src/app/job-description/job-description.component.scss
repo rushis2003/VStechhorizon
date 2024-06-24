@@ -1,0 +1,90 @@
+.job-description {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  border-radius: 5px;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#job-description-title {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.info-line {
+  margin-top: 10px;
+}
+
+.info-line .label {
+  font-weight: bold;
+}
+
+.info-line p,
+.info-line ul {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.info-line ul {
+  list-style-type: disc;
+  padding-left: 70px;
+}
+
+.info-line li {
+  margin-bottom: 5px;
+}
+
+#apply-now-btn {
+  width: 120px;
+  height: 40px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+}
+
+
+
+/* For devices with width of 1024px and above (like desktops) */
+@media only screen and (min-width: 1025px) {
+  .job-description {
+    font-size: 20px; 
+  }
+}
+
+/* For tablets (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .job-description {
+    max-width: 600px; 
+    padding: 15px; 
+    font-size: 16px; 
+  }
+}
+
+/* For mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+  .job-description {
+    max-width: 90%;
+    padding: 10px; 
+    font-size: 18px; 
+  }
+  #job-description-title {
+    font-size: 28px; 
+  }
+  .info-line ul {
+    padding-left: 30px; 
+  }
+  #apply-now-btn {
+    width: 100%; 
+    margin-top: 15px; 
+  }
+}

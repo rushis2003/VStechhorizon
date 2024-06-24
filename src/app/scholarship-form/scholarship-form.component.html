@@ -1,0 +1,281 @@
+<!-- <app-main-header ></app-main-header >
+  <div class="main" >
+   
+    <div class="container">
+      <form [formGroup]="scholarshipForm" (ngSubmit)="onSubmit()" >
+        <h1><b>Scholarship Application Form</b></h1>
+        <div class="form-group">
+          <label for="name">Name(As per your Aadhar)</label>
+          <input id="name" formControlName="name" class="form-control"  />
+          <div *ngIf="f['name'].errors && (f['name'].dirty || f['name'].touched)" class="error-message">
+            <div *ngIf="f['name'].errors['required']">Name is required.</div>
+            <div *ngIf="f['name'].errors['pattern']">Only characters are allowed in the name.</div>
+          </div>
+        </div>
+    
+        <div class="form-group">
+          <label for="number">Mobile Number</label>
+          <input id="number" formControlName="number" class="form-control" />
+          <div *ngIf="f['number'].errors && (f['number'].dirty || f['number'].touched)" class="error-message">
+            <div *ngIf="f['number'].errors['required']">Mobile number is required.</div>
+            <div *ngIf="f['number'].errors['pattern']">Mobile number must be exactly 10 digits.</div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" formControlName="email" class="form-control"  />
+          <div *ngIf="f['email'].errors && (f['email'].dirty || f['email'].touched)" class="error-message">
+            <div *ngIf="f['email'].errors['required']">Email is required.</div>
+            <div *ngIf="f['email'].errors['email']">Invalid email format.</div>
+          </div>
+        </div>
+    
+        <div class="form-group">
+          <label for="school">School Name</label>
+          <input id="school" formControlName="school" class="form-control"  />
+          <div *ngIf="scholarshipForm.get('school')?.errors?.['required'] && scholarshipForm.get('school')?.touched" class="error-message">
+           School Name is required
+          </div> 
+        </div>
+    
+        <div class="form-group">
+          <label for="std">Standard</label>
+          <input id="std" formControlName="std" class="form-control"  />
+          <div *ngIf="scholarshipForm.get('std')?.errors?.['required'] && scholarshipForm.get('std')?.touched" class="error-message">
+            Standard is required
+          </div> 
+        </div>
+    
+        <div class="form-group">
+          <label for="file1">Previous Year Marksheet:</label>
+        <input type="file" id="file1" name="file1" accept="/" formControlName="file1" (change)="onFileChange($event)" class="form-control">
+        <div *ngIf="scholarshipForm.get('file1')?.errors?.['required'] && scholarshipForm.get('file1')?.touched" class="error-message">
+          Previous Year Marksheet required
+        </div>
+  
+        <div class="form-group">
+          <label for="aadhar">Aadhar Number</label>
+          <input id="aadhar" formControlName="aadhar" class="form-control" />
+          <div *ngIf="f['aadhar'].errors && (f['aadhar'].dirty || f['aadhar'].touched)" class="error-message">
+            <div *ngIf="f['aadhar'].errors['required']">Aadhar number is required.</div>
+            <div *ngIf="f['aadhar'].errors['pattern']">Aadhar number must be exactly 12 digits.</div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="dateOfBirth">Date of Birth</label>
+          <input id="dateOfBirth" type="date" formControlName="dateOfBirth" class="form-control"  />
+          <div *ngIf="scholarshipForm.get('dateOfBirth')?.errors?.['required'] && scholarshipForm.get('dateOfBirth')?.touched" class="error-message">
+            DOB is required
+          </div> 
+        </div>
+    
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          
+            <input type="radio" formControlName="gender" value="male" > Male
+           <input type="radio" formControlName="gender" value="female" > Female
+         
+          <div *ngIf="scholarshipForm.get('gender')?.errors?.['required'] && scholarshipForm.get('gender')?.touched" class="error-message">
+            Gender is required
+          </div>
+        </div>
+    
+        <div class="form-group">
+          <label for="address">Current Address</label>
+          <textarea name="address" id="address" rows="2" formControlName="address" class="form-control" ></textarea>
+          <div *ngIf="scholarshipForm.get('address')?.errors?.['required'] && scholarshipForm.get('address')?.touched" class="error-message">
+            Current Address is required
+          </div>
+        </div>
+    
+        <div class="form-group">
+          <label for="aadharadd">As per aadhar Address</label>
+          <textarea name="aadharadd" id="aadharadd" rows="2" formControlName="aadharadd" class="form-control" ></textarea>
+          <div *ngIf="scholarshipForm.get('aadharadd')?.errors?.['required'] && scholarshipForm.get('aadharadd')?.touched" class="error-message">
+            Aadhar Address is required
+          </div>
+        </div>
+  
+        </div>
+        <div class="button">
+          <button type="submit" class="btn btn-primary" (click)="onSave()">Save</button>
+          <button type="submit" class="btn btn-primary" (click)="onNext()">Next</button>
+        </div>
+         
+       
+        
+      </form>
+    </div>
+  </div>
+  <app-chatbot></app-chatbot>
+  <app-whatsapp></app-whatsapp>
+  <app-footer></app-footer> -->
+
+
+  <app-main-header></app-main-header>
+  <div class="main">
+  
+    <div class="container">
+      <form [formGroup]="scholarshipForm" (ngSubmit)="onSubmit()">
+       <h1><b>Scholarship Application Form</b></h1>
+        <div class="form-group">
+          <label for="name">Name(As per your Aadhar)<span>*</span></label>
+          <input id="name" formControlName="name" class="form-control" />
+          <div *ngIf="f['name'].errors && (f['name'].dirty || f['name'].touched)" class="error-message">
+            <div *ngIf="f['name'].errors['required']">Name is required.</div>
+            <div *ngIf="f['name'].errors['pattern']">Only characters are allowed in the name.</div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="number">Mobile Number <span>*</span></label>
+          <input id="number" formControlName="number" class="form-control" />
+          <div *ngIf="f['number'].errors && (f['number'].dirty || f['number'].touched)" class="error-message">
+            <div *ngIf="f['number'].errors['required']">Mobile number is required.</div>
+            <div *ngIf="f['number'].errors['pattern']">Mobile number must be exactly 10 digits.</div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email <span>*</span></label>
+          <input id="email" type="email" formControlName="email" class="form-control" />
+          <div *ngIf="f['email'].errors && (f['email'].dirty || f['email'].touched)" class="error-message">
+            <div *ngIf="f['email'].errors['required']">Email is required.</div>
+            <div *ngIf="f['email'].errors['email']">Invalid email format.</div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="school">College Name <span>*</span></label>
+          <input id="school" formControlName="school" class="form-control" />
+          <div *ngIf="scholarshipForm.get('school')?.errors?.['required'] && scholarshipForm.get('school')?.touched"
+            class="error-message">
+            College Name is required
+          </div>
+        </div>
+  
+        <!-- <div class="form-group">
+              <label for="std">Standard</label>
+              <input id="std" formControlName="std" class="form-control"  />
+              <div *ngIf="scholarshipForm.get('std')?.errors?.['required'] && scholarshipForm.get('std')?.touched" class="error-message">
+                Standard is required
+              </div> 
+            </div> -->
+        <div class="form-group">
+          <label for="std">Course Type <span>*</span></label>
+          <select id="std" formControlName="std" class="form-control" (change)="onStandardChange($event)">
+            <option value="">Select Course Type</option>
+            <option value="diploma">Diploma</option>
+            <option value="degree">B.E/B.Tech</option>
+          </select>
+          <div *ngIf="scholarshipForm.get('std')?.errors?.['required'] && scholarshipForm.get('std')?.touched"
+            class="error-message">
+            Standard is required
+          </div>
+        </div>
+  
+        <div *ngIf="selectedStandard">
+          <div class="form-group">
+            <label for="year">Academic Year <span>*</span></label>
+            <select id="year" formControlName="year" class="form-control">
+              <option value="">Select Year</option>
+              <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+            </select>
+            <div *ngIf="scholarshipForm.get('year')?.errors?.['required'] && scholarshipForm.get('year')?.touched"
+              class="error-message">
+              Year is required
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="branch">Branch <span>*</span></label>
+            <input id="branch" formControlName="branch" class="form-control" />
+            <div *ngIf="scholarshipForm.get('branch')?.errors?.['required'] && scholarshipForm.get('branch')?.touched"
+              class="error-message">
+              Branch is required
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="form-group">
+          <label for="file1">Previous Year Marksheet:</label>
+          <input type="file" id="file1" name="file1" accept="/" formControlName="file1" (change)="onFileChange($event)" class="form-control">
+          <div *ngIf="scholarshipForm.get('file1')?.errors?.['required'] && scholarshipForm.get('file1')?.touched"
+            class="error-message">
+            Previous Year Marksheet required
+          </div>
+  
+          <div class="form-group">
+            <label for="aadhar">Aadhar Number <span>*</span></label>
+            <input id="aadhar" formControlName="aadhar" class="form-control" />
+            <div *ngIf="f['aadhar'].errors && (f['aadhar'].dirty || f['aadhar'].touched)" class="error-message">
+              <div *ngIf="f['aadhar'].errors['required']">Aadhar number is required.</div>
+              <div *ngIf="f['aadhar'].errors['pattern']">Aadhar number must be exactly 12 digits.</div>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="dateOfBirth">Date of Birth <span>*</span></label>
+            <input id="dateOfBirth" type="date" formControlName="dateOfBirth" class="form-control" />
+            <div
+              *ngIf="scholarshipForm.get('dateOfBirth')?.errors?.['required'] && scholarshipForm.get('dateOfBirth')?.touched"
+              class="error-message">
+              DOB is required
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="gender">Gender <span>*</span></label>
+            <div>
+              <input type="radio" formControlName="gender" value="male"> Male
+              <input type="radio" formControlName="gender" value="female"> Female
+              <input type="radio" formControlName="gender" value="other"> Other
+            </div>
+            <div *ngIf="scholarshipForm.get('gender')?.errors?.['required'] && scholarshipForm.get('gender')?.touched"
+              class="error-message">
+              Gender is required
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="address">Current Address <span>*</span></label>
+            <textarea name="address" id="address" rows="2" formControlName="address" class="form-control"></textarea>
+            <div *ngIf="scholarshipForm.get('address')?.errors?.['required'] && scholarshipForm.get('address')?.touched"
+              class="error-message">
+              Current Address is required
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="aadharadd">Address(As Per Aadhar)<span>*</span></label>
+            <textarea name="aadharadd" id="aadharadd" rows="2" formControlName="aadharadd"
+              class="form-control"></textarea>
+            <div
+              *ngIf="scholarshipForm.get('aadharadd')?.errors?.['required'] && scholarshipForm.get('aadharadd')?.touched"
+              class="error-message">
+              Aadhar Address is required
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="referralCode">Referral Code</label>
+            <input type="text" name="referralCode" id="referralCode" formControlName="referralCode" class="form-control">
+          </div>
+  
+        </div>
+        <div class="button">
+          <button type="submit" class="btn btn-primary" (click)="onSave()">Save</button>
+          <button type="submit" class="btn btn-primary" (click)="onNext()">Next</button>
+        </div>
+  
+  
+  
+      </form>
+    </div>
+  </div>
+  <app-chatbot></app-chatbot>
+  <app-whatsapp></app-whatsapp>
+  <app-footer></app-footer>

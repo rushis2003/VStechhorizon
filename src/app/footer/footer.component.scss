@@ -1,0 +1,376 @@
+#f-container {
+
+  height: auto;
+  width: 100%;
+  display: flex;
+
+  background-color: black;
+  border: none;
+  gap: 5%;
+
+}
+
+#f-box1 {
+  margin-left: 5%;
+  margin-top: 7%;
+  height: 200%;
+  width: 20%;
+  color: white;
+  margin-right: 5%;
+  gap: 5%;
+
+
+
+}
+
+#f-box2 {
+  height: 200px;
+  width: 25%;
+  color: white;
+  margin-top: 2%;
+  margin-right: 2%;
+
+
+
+}
+
+#f-box2 h3 {
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#f-box3 {
+  margin-top: 2%;
+  height: auto;
+  width: 20%;
+  color: white;
+  margin-left: 0;
+
+
+}
+
+#f-box3 h3 {
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#f-box3 p {
+  margin: 7px;
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+}
+
+#f-box4 {
+  margin-top: 2%;
+  height: auto;
+  width: 15%;
+  color: white;
+  margin-right: 5%;
+
+
+
+}
+
+#f-box4 p {
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#f-box4 h3 {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+#vs-img {
+
+  width: 100%;
+  margin-top: 24px;
+}
+
+.contac-p {
+  text-size-adjust: 17px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#f-box4-logo {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.contac-p {
+  display: flex;
+  font-size: 17px;
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.f-cr {
+  width: 100%;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.f-cr>h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  margin-left: 70%;
+}
+
+.subscribe {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 70%;
+
+}
+
+.subscribe>h5 {
+  margin: 0;
+  font-size: 14px;
+  margin-bottom: 10px;
+
+}
+
+.subscribe>hr {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.subscribe>span {
+  display: flex;
+  margin-top: 5px;
+}
+
+.rounded-input {
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+  background-color: white;
+  height: 45px;
+  font-size: 14px;
+  border: none;
+  padding-left: 10px;
+  width: 180px;
+  padding-left: 25px;
+}
+
+.round-btn {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #007bff;
+  color: white;
+  height: 48px;
+  font-size: 14px;
+  border: none;
+  margin-left: 0;
+  width: 100px;
+  padding: 0 10px;
+}
+
+
+/* For devices with width of 1024px and above (like desktops) */
+@media only screen and (min-width: 1025px) {
+
+  #f-container {
+    flex-direction: row;
+  }
+
+  #f-box1 {
+    width: 20%;
+    margin-left: 5%;
+    margin-top: 7%;
+  }
+
+  #f-box2 {
+    width: 25%;
+    margin-right: 2%;
+  }
+
+  #f-box3 {
+    width: 20%;
+  }
+
+  #f-box4 {
+    width: 15%;
+    margin-right: 5%;
+  }
+
+  .subscribe {
+    width: 30%;
+    margin-left: 70%;
+  }
+
+  .f-cr>h4 {
+    margin-left: 70%;
+  }
+}
+
+/* For tablets (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  #f-container {
+    flex-direction: column;
+  }
+
+  #f-box1,
+  #f-box2,
+  #f-box3,
+  #f-box4 {
+    width: 100%;
+    margin: 2% 0;
+  }
+
+  .subscribe {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .f-cr>h4 {
+    margin-left: 0;
+  }
+}
+
+/* For mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+  #f-container {
+    flex-direction: column;
+    padding-left: 15px;
+  }
+
+  #f-box1 {
+    width: 70%;
+
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  #f-box2>p {
+    margin-bottom: 5px;
+    margin-left: 5px;
+    width: 300px;
+  }
+
+  #f-box3,
+  #f-box4 {
+    width: 100%;
+    margin: 2% 0;
+  }
+
+  .subscribe {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .f-cr>h4 {
+    margin-left: 0;
+    font-size: 13px;
+  }
+}
+
+#f-box4-logo,
+h3 {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.sub-f-box3 > p > a {
+  margin-bottom: 5px;
+  font-size: 16px;
+  margin-left: 0;
+  text-decoration: none;
+  color: white; /* Assuming you want the text color to be white */
+  transition: transform 0.3s; /* Ensure transition is applied */
+  display: inline-block; /* Make it inline-block for transform to work */
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit;
+  margin-top: -10px;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+  transition: transform 0.3s; /* Ensure transition is applied */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: 0;
+  top: 50px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+.dropdown .dropdown-content.show {
+  display: block;
+}
+
+.dropdown > .dropbtn:hover {
+  color: #007BFF; 
+  transform: scale(1.2);
+}
+
+.sub-f-box3 > p > a:hover {
+  color: #007BFF; 
+  transform: scale(1.2);
+}
+
+// .dropbtn :hover {
+// background-color: #007BFF; 
+// color: white; 
+// width: 32%;
+// transform: scale(1.3);
+// transition: transform 0.3s;
+// }
+/* Change link color and background color on hover */
+// #f-box3 a:hover {
+//   color: white;
+//   background-color: #007BFF;
+//   padding: 12px 16px; 
+//   display: block;   
+//   text-align: left;
+// }

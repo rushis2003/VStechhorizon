@@ -1,0 +1,102 @@
+<app-main-header></app-main-header>
+
+<div class="job-description">
+  <div id="job-description-title">
+    Job Discription
+  </div>
+  <div class="info-line">
+    <span class="label">Company Profile:</span>
+    <span>&nbsp; &nbsp;{{ jobDetails.jobDescription.companyProfile }}</span>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Position:</span>
+    <p>{{ jobDetails.jobDescription.position }}</p>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Current Opening:</span>
+    <p>{{ jobDetails.jobDescription.currentOpening }}</p>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Experience Level:</span>
+    <p>{{ jobDetails.experienceLevel }}</p>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Primary Skill:</span>
+    <br>
+    <ul>
+      <li *ngFor="let skill of jobDetails.jobDescription.primarySkill">{{ skill }}</li>
+    </ul>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Job Location:</span>
+    <p>{{ jobDetails.jobLocation }}</p>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Work Days:</span>
+    <p>{{ jobDetails.jobDescription.workDays }}</p>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Work Timings:</span>
+    <p>{{ jobDetails.jobDescription.workTimings }}</p>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Salary:</span>
+    <p>{{ jobDetails.jobDescription.salary }}</p>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Educational Qualifications:</span>
+    <ul>
+      <li *ngFor="let qualification of jobDetails.jobDescription.educationalQualifications">{{ qualification }}</li>
+    </ul>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Role Overview:</span>
+    <p>{{ jobDetails.jobDescription.roleOverview }}</p>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Required Role Attributes:</span>
+    <br>
+    <ul>
+      <li *ngFor="let attribute of jobDetails.jobDescription.requiredRoleAttributes">{{ attribute }}</li>
+    </ul>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Required Skills:</span>
+    <br>
+    <ul>
+      <li *ngFor="let skill of jobDetails.jobDescription.requiredSkills">{{ skill }}</li>
+    </ul>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Additional Skills:</span>
+    <br>
+    <ul>
+      <li *ngFor="let skill of jobDetails.jobDescription.additionalSkills">{{ skill }}</li>
+    </ul>
+  </div>
+
+  <div class="info-line">
+    <span class="label">Career Path:</span>
+    <p>{{ jobDetails.jobDescription.careerPath }}</p>
+  </div>
+
+  <div id="apply-now">
+    <button id="apply-now-btn" [routerLink]="'/application-form'">Apply Now</button>
+  </div>
+</div>
+<app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer>

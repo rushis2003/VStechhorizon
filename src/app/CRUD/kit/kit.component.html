@@ -1,0 +1,35 @@
+<app-a-header></app-a-header>
+<div>
+    <h2>STEAM Kit Information</h2>
+</div>
+<table class="table table-bordered">
+    <thead class="thead-light">
+        <tr>
+            <!-- <th scope="col">Sr.No</th> -->
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+            <th scope="col">Pincode</th>
+            <th scope="col">Kit</th>
+            <th scope="col">Quntity</th>
+            <th scope="col">Additional Requests</th>
+            <th scope="col">Submit Date & Time</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let projectkit of projectkits">
+            <td>{{projectkit.fullName}}</td>
+            <td>{{projectkit.email}}</td>
+            <td>{{projectkit.phoneNumber}}</td>
+            <td>{{projectkit.address}}</td>
+            <td>{{projectkit.pincode}}</td>
+            <td>{{projectkit.kit}}</td>
+            <td>{{projectkit.quantity}}</td>
+            <td>{{projectkit.additionalRequests}}</td>
+            <td>{{projectkit.submitDate}}</td>
+        </tr>
+       
+    </tbody>
+</table>

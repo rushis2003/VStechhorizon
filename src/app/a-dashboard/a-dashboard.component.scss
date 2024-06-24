@@ -1,0 +1,211 @@
+.dashboard-container {
+  padding: 20px;
+  transition: margin-left 0.5s; 
+}
+
+.stats-container {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card-1 {
+  display: flex;
+  flex-direction: row; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 100px;
+  width: 300px;
+  // background-color: yellow;
+}
+
+.stat-card-2 {
+  display: flex;
+  flex-direction: row; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 100px;
+  width: 300px;
+  // background-color: greenyellow;
+}
+
+.stat-card-3 {
+  display: flex;
+  flex-direction: row; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 100px;
+  width: 300px;
+  // background-color: blue;
+}
+
+.stat-card-4 {
+  display: flex;
+  flex-direction: row; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 100px;
+  width: 300px;
+  // background-color: red;
+}
+
+// .stat-name {
+//   color: white;
+// }
+
+.stat-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.stat-value {
+  font-size: 1.2em; 
+  font-weight: bold;
+  // text-align: center;
+}
+.stat-icon{
+  width: 25px;
+  margin-top: 10px;
+}
+.popup-settings-container {
+  margin-top: 50px;
+  margin-left: 285px;
+ border: 1px solid black;
+ border-width: 5px;
+  padding: 10px;
+  width: 50%;
+  border-radius: 5px;
+  transition: margin-left 0.5s; 
+}
+.content-shift {
+  margin-left: 250px; 
+}
+.popup-settings-checkbox {
+  margin-left: 10px;
+}
+
+.popup-settings-select, .popup-settings-textarea, .popup-settings-input {
+  display: block;
+  margin-top: 10px;
+}
+
+.save-settings-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-settings-button:hover {
+  background-color: #0056b3;
+}
+
+.popup-sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+}
+
+.inline-label {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.dashboard-container {
+  margin-top: 60px;
+  margin-left: calc(200px + 5%);
+  margin-right: 5%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.side {
+  margin-left: 30px;
+}
+label, h2{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+/* For devices with width of 1024px and above (like desktops) */
+@media only screen and (min-width: 1025px) {
+  .dashboard-container {
+    margin-left: calc(200px + 5%);
+    margin-right: 5%;
+  }
+
+  .popup-settings-container {
+    width: 50%;
+  }
+}
+
+/* For tablets (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .dashboard-container {
+    margin-left: calc(100px + 5%);
+    margin-right: 5%;
+  }
+
+  .stats-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .stat-card {
+    width: 45%; /* Two cards per row */
+  }
+
+  .popup-settings-container {
+    width: 75%;
+  }
+
+  .popup-sub {
+    flex-direction: column;
+  }
+}
+
+/* For mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+  .dashboard-container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+
+  .stat-card, h1 {
+    width: 70%; 
+    margin-left: 40%;
+  }
+
+  .popup-settings-container {
+    width: 58%;
+    margin-left: 40%;
+  }
+
+  .popup-sub {
+    flex-direction: column;
+  }
+
+  .side {
+    margin-left: 0;
+  }
+}

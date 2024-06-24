@@ -1,0 +1,412 @@
+<!-- <app-main-header></app-main-header>
+
+<div id="appliaction-form-container">
+    <div id="appliaction-form-title">Application Form</div>
+    <div id="app-application-content">
+        <!-- <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+            <div >
+                <label for="position">Position:</label><br>
+                <select id="position" formControlName="position">
+                    <option value="" disabled selected>----Please choose an option----</option>
+                    <option *ngFor="let job of jobs" [value]="job.title">{{ job.title }}</option>
+                </select>
+                <div
+                    *ngIf="applicationForm.controls['position'].invalid && (applicationForm.controls['position'].dirty || applicationForm.controls['position'].touched)">
+                    <div *ngIf="applicationForm.controls['position'].errors?.['required']">Position is required</div>
+                </div>
+            </div>
+            <br>
+            <div>
+                <label for="firstName">First Name:</label><br>
+                <input class="input-field" type="text" id="firstName" formControlName="firstName" required>
+                <div
+                    *ngIf="applicationForm.controls['firstName'].invalid && (applicationForm.controls['firstName'].dirty || applicationForm.controls['firstName'].touched)">
+                    <div *ngIf="applicationForm.controls['firstName'].errors?.['required']">First Name is required</div>
+                </div>
+                <br><br>
+            </div>
+            <div>
+                <label for="lastName">Last Name:</label><br>
+                <input class="input-field" type="text" id="lastName" formControlName="lastName" required><br><br>
+                <div
+                    *ngIf="applicationForm.controls['lastName'].invalid && (applicationForm.controls['lastName'].dirty || applicationForm.controls['lastName'].touched)">
+                    <div *ngIf="applicationForm.controls['lastName'].errors?.['required']">Last Name is required</div>
+                </div>
+            </div>
+            <div>
+                <label for="email">Email ID:</label><br>
+                <input class="input-field" type="email" id="email" formControlName="email" required><br><br>
+                <div
+                    *ngIf="applicationForm.controls['email'].invalid && (applicationForm.controls['email'].dirty || applicationForm.controls['email'].touched)">
+                    <div *ngIf="applicationForm.controls['email'].errors?.['required']">Email ID is required</div>
+                    <div *ngIf="applicationForm.controls['email'].errors?.['email']">Please enter a valid email address
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="contactNumber">Contact Number:</label><br>
+                <input class="input-field" type="tel" id="contactNumber" formControlName="contactNumber"
+                    required><br><br>
+                <div
+                    *ngIf="applicationForm.controls['contactNumber'].invalid && (applicationForm.controls['contactNumber'].dirty || applicationForm.controls['contactNumber'].touched)">
+                    <div *ngIf="applicationForm.controls['contactNumber'].errors?.['required']">Contact Number is
+                        required</div>
+                </div>
+            </div>
+            <div>
+                <label for="alternateContactNumber">Alternate Contact Number:</label><br>
+                <input class="input-field" type="tel" id="alternateContactNumber"
+                    formControlName="alternateContactNumber"><br><br>
+            </div>
+            <div>
+                <label for="dob">Date of Birth:</label><br>
+                <input class="input-field" type="date" id="dob" formControlName="dob" required><br><br>
+                <div
+                    *ngIf="applicationForm.controls['dob'].invalid && (applicationForm.controls['dob'].dirty || applicationForm.controls['dob'].touched)">
+                    <div *ngIf="applicationForm.controls['dob'].errors?.['required']">Date of Birth is required</div>
+                </div>
+            </div>
+            <div>
+                <label for="linkedin">Attach your LinkedIn Profile Link:</label><br>
+                <input class="input-field" type="url" id="linkedin" formControlName="linkedin"><br><br>
+            </div>
+            <div>
+                <label for="currentCompany">Current/Previous Company:</label><br>
+                <input class="input-field" type="text" id="currentCompany" formControlName="currentCompany"
+                    required><br><br>
+                <div
+                    *ngIf="applicationForm.controls['currentCompany'].invalid && (applicationForm.controls['currentCompany'].dirty || applicationForm.controls['currentCompany'].touched)">
+                    <div *ngIf="applicationForm.controls['currentCompany'].errors?.['required']">Current/Previous
+                        Company is required</div>
+                </div>
+            </div>
+            <div>
+                <label for="totalExperience">Total Work Experience:</label><br>
+                <input class="input-field" type="text" id="totalExperience" formControlName="totalExperience"
+                    placeholder="Years & Months" required><br><br>
+                <div
+                    *ngIf="applicationForm.controls['totalExperience'].invalid && (applicationForm.controls['totalExperience'].dirty || applicationForm.controls['totalExperience'].touched)">
+                    <div *ngIf="applicationForm.controls['totalExperience'].errors?.['required']">Total Work Experience
+                        is required</div>
+                </div>
+            </div>
+            <div>
+                <label for="relevantExperience">Relevant Work Experience:</label><br>
+                <input class="input-field" type="text" id="relevantExperience" formControlName="relevantExperience"
+                    placeholder="Years & Months(Ex: 2 Year 6 Months)" required><br><br>
+                <div
+                    *ngIf="applicationForm.controls['relevantExperience'].invalid && (applicationForm.controls['relevantExperience'].dirty || applicationForm.controls['relevantExperience'].touched)">
+                    <div *ngIf="applicationForm.controls['relevantExperience'].errors?.['required']">Relevant Work
+                        Experience is required</div>
+                </div>
+            </div>
+            <div>
+                <label for="currentCTC">Current CTC:</label><br>
+                <input class="input-field" type="number" id="currentCTC" formControlName="currentCTC" required><br><br>
+                <div
+                    *ngIf="applicationForm.controls['currentCTC'].invalid && (applicationForm.controls['currentCTC'].dirty || applicationForm.controls['currentCTC'].touched)">
+                    <div *ngIf="applicationForm.controls['currentCTC'].errors?.['required']">Current CTC is required
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="expectedCTC">Expected CTC:</label><br>
+                <input class="input-field" type="number" id="expectedCTC" formControlName="expectedCTC"
+                    required><br><br>
+                <div
+                    *ngIf="applicationForm.controls['expectedCTC'].invalid && (applicationForm.controls['expectedCTC'].dirty || applicationForm.controls['expectedCTC'].touched)">
+                    <div *ngIf="applicationForm.controls['expectedCTC'].errors?.['required']">Expected CTC is required
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label for="noticePeriod">Notice Period:</label><br>
+                <input class="input-field" type="number" id="noticePeriod" formControlName="noticePeriod"
+                    required><br><br>
+                <div
+                    *ngIf="applicationForm.controls['noticePeriod'].invalid && (applicationForm.controls['noticePeriod'].dirty || applicationForm.controls['noticePeriod'].touched)">
+                    <div *ngIf="applicationForm.controls['noticePeriod'].errors?.['required']">Notice Period is required
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="resume">Resume:</label><br>
+                <input type="file" id="resume" formControlName="resume" size="300px" required (change)="onFileChange($event)"><br><br>
+                <div
+                    *ngIf="applicationForm.controls['resume'].invalid && (applicationForm.controls['resume'].dirty || applicationForm.controls['resume'].touched)">
+                    <div *ngIf="applicationForm.controls['resume'].errors?.['required']">Resume is required</div>
+                </div>
+            </div>
+            <div id="btn-div">
+                <input type="submit" id="btn" value="Submit" [disabled]="applicationForm.invalid">
+            </div>
+        </form> 
+
+        <app-main-header></app-main-header>
+
+<div id="application-form-container">
+    <div id="application-form-title">Application Form</div>
+    <div id="app-application-content">
+        <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+            <div>
+                <label for="position">Position:</label><br>
+                <select id="position" formControlName="position">
+                    <option value="" disabled selected>----Please choose an option----</option>
+                    <option *ngFor="let job of jobs" [value]="job.title">{{ job.title }}</option>
+                </select>
+                <div *ngIf="isControlInvalid('position')">
+                    <div *ngIf="applicationForm.controls['position'].errors?.required">Position is required</div>
+                </div>
+            </div>
+            <br>
+            <div>
+                <label for="firstName">First Name:</label><br>
+                <input class="input-field" type="text" id="firstName" formControlName="firstName" required>
+                <div *ngIf="isControlInvalid('firstName')">
+                    <div *ngIf="applicationForm.controls['firstName'].errors?.required">First Name is required</div>
+                    <div *ngIf="applicationForm.controls['firstName'].errors?.alpha">First Name must contain only alphabetic characters</div>
+                </div>
+                <br><br>
+            </div>
+            <div>
+                <label for="lastName">Last Name:</label><br>
+                <input class="input-field" type="text" id="lastName" formControlName="lastName" required>
+                <div *ngIf="isControlInvalid('lastName')">
+                    <div *ngIf="applicationForm.controls['lastName'].errors?.required">Last Name is required</div>
+                    <div *ngIf="applicationForm.controls['lastName'].errors?.alpha">Last Name must contain only alphabetic characters</div>
+                </div>
+                <br><br>
+            </div>
+            <div>
+                <label for="email">Email ID:</label><br>
+                <input class="input-field" type="email" id="email" formControlName="email" required><br><br>
+                <div *ngIf="isControlInvalid('email')">
+                    <div *ngIf="applicationForm.controls['email'].errors?.required">Email ID is required</div>
+                    <div *ngIf="applicationForm.controls['email'].errors?.email">Please enter a valid email address</div>
+                </div>
+            </div>
+            <div>
+                <label for="contactNumber">Contact Number:</label><br>
+                <input class="input-field" type="tel" id="contactNumber" formControlName="contactNumber" required><br><br>
+                <div *ngIf="isControlInvalid('contactNumber')">
+                    <div *ngIf="applicationForm.controls['contactNumber'].errors?.required">Contact Number is required</div>
+                    <div *ngIf="applicationForm.controls['contactNumber'].errors?.numeric">Contact Number must be exactly 10 digits</div>
+                </div>
+            </div>
+            <div>
+                <label for="alternateContactNumber">Alternate Contact Number:</label><br>
+                <input class="input-field" type="tel" id="alternateContactNumber" formControlName="alternateContactNumber"><br><br>
+                <div *ngIf="isControlInvalid('alternateContactNumber')">
+                    <div *ngIf="applicationForm.controls['alternateContactNumber'].errors?.numeric">Alternate Contact Number must be exactly 10 digits</div>
+                </div>
+            </div>
+            <div>
+                <label for="dob">Date of Birth:</label><br>
+                <input class="input-field" type="date" id="dob" formControlName="dob" required><br><br>
+                <div *ngIf="isControlInvalid('dob')">
+                    <div *ngIf="applicationForm.controls['dob'].errors?.required">Date of Birth is required</div>
+                </div>
+            </div>
+            <div>
+                <label for="linkedin">Attach your LinkedIn Profile Link:</label><br>
+                <input class="input-field" type="url" id="linkedin" formControlName="linkedin"><br><br>
+            </div>
+            <div>
+                <label for="currentCompany">Current/Previous Company:</label><br>
+                <input class="input-field" type="text" id="currentCompany" formControlName="currentCompany" required><br><br>
+                <div *ngIf="isControlInvalid('currentCompany')">
+                    <div *ngIf="applicationForm.controls['currentCompany'].errors?.required">Current/Previous Company is required</div>
+                </div>
+            </div>
+            <div>
+                <label for="totalExperience">Total Work Experience:</label><br>
+                <input class="input-field" type="text" id="totalExperience" formControlName="totalExperience" placeholder="Years & Months" required><br><br>
+                <div *ngIf="isControlInvalid('totalExperience')">
+                    <div *ngIf="applicationForm.controls['totalExperience'].errors?.required">Total Work Experience is required</div>
+                </div>
+            </div>
+            <div>
+                <label for="relevantExperience">Relevant Work Experience:</label><br>
+                <input class="input-field" type="text" id="relevantExperience" formControlName="relevantExperience" placeholder="Years & Months(Ex: 2 Year 6 Months)" required><br><br>
+                <div *ngIf="isControlInvalid('relevantExperience')">
+                    <div *ngIf="applicationForm.controls['relevantExperience'].errors?.required">Relevant Work Experience is required</div>
+                </div>
+            </div>
+            <div>
+                <label for="currentCTC">Current CTC:</label><br>
+                <input class="input-field" type="number" id="currentCTC" formControlName="currentCTC" required><br><br>
+                <div *ngIf="isControlInvalid('currentCTC')">
+                    <div *ngIf="applicationForm.controls['currentCTC'].errors?.required">Current CTC is required</div>
+                </div>
+            </div>
+            <div>
+                <label for="expectedCTC">Expected CTC:</label><br>
+                <input class="input-field" type="number" id="expectedCTC" formControlName="expectedCTC" required><br><br>
+                <div *ngIf="isControlInvalid('expectedCTC')">
+                    <div *ngIf="applicationForm.controls['expectedCTC'].errors?.required">Expected CTC is required</div>
+                </div>
+            </div>
+            <div>
+                <label for="noticePeriod">Notice Period:</label><br>
+                <input class="input-field" type="text" id="noticePeriod" formControlName="noticePeriod" required><br><br>
+                <div *ngIf="isControlInvalid('noticePeriod')">
+                    <div *ngIf="applicationForm.controls['noticePeriod'].errors?.required">Notice Period is required</div>
+                </div>
+            </div>
+            <div>
+                <label for="resume">Resume:</label><br>
+                <input class="input-field" type="file" id="resume" formControlName="resume" required (change)="onFileChange($event)"><br><br>
+                <div *ngIf="isControlInvalid('resume')">
+                    <div *ngIf="applicationForm.controls['resume'].errors?.required">Resume is required</div>
+                </div>
+            </div>
+            <button type="submit" [disabled]="applicationForm.invalid">Submit</button>
+        </form>
+
+    </div>
+</div>
+<app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer> -->
+
+
+<app-main-header></app-main-header>
+
+<div id="appliaction-form-container">
+  <div id="appliaction-form-title">Application Form</div>
+  <div id="app-application-content">
+    <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="position">Position:</label><br>
+        <select id="position" formControlName="position">
+          <option value="" disabled selected>----Please choose an option----</option>
+          <option *ngFor="let job of jobs" [value]="job.title">{{ job.title }}</option>
+        </select>
+        <div *ngIf="isControlInvalid('position')" class="error-message">
+          <div *ngIf="applicationForm.controls['position']?.errors?.['required']">Position is required</div>
+        </div>
+      </div>
+      <br>
+      <div>
+        <label for="firstName">First Name:</label><br>
+        <input class="input-field" type="text" id="firstName" formControlName="firstName" required>
+        <div *ngIf="isControlInvalid('firstName')" class="error-message">
+          <div *ngIf="applicationForm.controls['firstName']?.errors?.['required']">First Name is required</div>
+          <div *ngIf="applicationForm.controls['firstName']?.errors?.['alpha']">First Name must contain only alphabetic
+            characters</div>
+        </div>
+        <br><br>
+      </div>
+      <div>
+        <label for="lastName">Last Name:</label><br>
+        <input class="input-field" type="text" id="lastName" formControlName="lastName" required>
+        <div *ngIf="isControlInvalid('lastName')" class="error-message">
+          <div *ngIf="applicationForm.controls['lastName']?.errors?.['required']">Last Name is required</div>
+          <div *ngIf="applicationForm.controls['lastName']?.errors?.['alpha']">Last Name must contain only alphabetic
+            characters</div>
+        </div>
+        <br><br>
+      </div>
+      <div>
+        <label for="email">Email ID:</label><br>
+        <input class="input-field" type="email" id="email" formControlName="email" required><br><br>
+        <div *ngIf="isControlInvalid('email')" class="error-message">
+          <div *ngIf="applicationForm.controls['email']?.errors?.['required']">Email ID is required</div>
+          <div *ngIf="applicationForm.controls['email']?.errors?.['email']">Please enter a valid email address</div>
+        </div>
+      </div>
+      <div>
+        <label for="contactNumber">Contact Number:</label><br>
+        <input class="input-field" type="tel" id="contactNumber" formControlName="contactNumber" required><br><br>
+        <div *ngIf="isControlInvalid('contactNumber')" class="error-message">
+          <div *ngIf="applicationForm.controls['contactNumber']?.errors?.['required']">Contact Number is required</div>
+          <div *ngIf="applicationForm.controls['contactNumber']?.errors?.['numeric']">Contact Number must be exactly 10
+            digits</div>
+        </div>
+      </div>
+      <div>
+        <label for="alternateContactNumber">Alternate Contact Number:</label><br>
+        <input class="input-field" type="tel" id="alternateContactNumber"
+          formControlName="alternateContactNumber"><br><br>
+        <div *ngIf="isControlInvalid('alternateContactNumber')" class="error-message">
+          <div *ngIf="applicationForm.controls['alternateContactNumber']?.errors?.['numeric']">Alternate Contact Number
+            must be exactly 10 digits</div>
+        </div>
+      </div>
+      <div>
+        <label for="dob">Date of Birth:</label><br>
+        <input class="input-field" type="date" id="dob" formControlName="dob" required><br><br>
+        <div *ngIf="isControlInvalid('dob')" class="error-message">
+          <div *ngIf="applicationForm.controls['dob']?.errors?.['required']">Date of Birth is required</div>
+        </div>
+      </div>
+      <div>
+        <label for="linkedin">Attach your LinkedIn Profile Link:</label><br>
+        <input class="input-field" type="url" id="linkedin" formControlName="linkedin"><br><br>
+      </div>
+      <div>
+        <label for="currentCompany">Current/Previous Company:</label><br>
+        <input class="input-field" type="text" id="currentCompany" formControlName="currentCompany" required><br><br>
+        <div *ngIf="isControlInvalid('currentCompany')" class="error-message">
+          <div *ngIf="applicationForm.controls['currentCompany']?.errors?.['required']">Current/Previous Company is
+            required</div>
+        </div>
+      </div>
+      <div>
+        <label for="totalExperience">Total Work Experience:</label><br>
+        <input class="input-field" type="text" id="totalExperience" formControlName="totalExperience"
+          placeholder="Years & Months" required><br><br>
+        <div *ngIf="isControlInvalid('totalExperience')" class="error-message">
+          <div *ngIf="applicationForm.controls['totalExperience']?.errors?.['required']">Total Work Experience is
+            required</div>
+        </div>
+      </div>
+      <div>
+        <label for="relevantExperience">Relevant Work Experience:</label><br>
+        <input class="input-field" type="text" id="relevantExperience" formControlName="relevantExperience"
+          placeholder="Years & Months(Ex: 2 Year 6 Months)" required><br><br>
+        <div *ngIf="isControlInvalid('relevantExperience')" class="error-message">
+          <div *ngIf="applicationForm.controls['relevantExperience']?.errors?.['required']">Relevant Work Experience is
+            required</div>
+        </div>
+      </div>
+      <div>
+        <label for="currentCTC">Current CTC:</label><br>
+        <input class="input-field" type="number" id="currentCTC" formControlName="currentCTC" required><br><br>
+        <div *ngIf="isControlInvalid('currentCTC')" class="error-message">
+          <div *ngIf="applicationForm.controls['currentCTC']?.errors?.['required']">Current CTC is required</div>
+        </div>
+      </div>
+      <div>
+        <label for="expectedCTC">Expected CTC:</label><br>
+        <input class="input-field" type="number" id="expectedCTC" formControlName="expectedCTC" required><br><br>
+        <div *ngIf="isControlInvalid('expectedCTC')" class="error-message">
+          <div *ngIf="applicationForm.controls['expectedCTC']?.errors?.['required']">Expected CTC is required</div>
+        </div>
+      </div>
+      <div>
+        <label for="noticePeriod">Notice Period:</label><br>
+        <input class="input-field" type="text" id="noticePeriod" formControlName="noticePeriod" required><br><br>
+        <div *ngIf="isControlInvalid('noticePeriod')" class="error-message">
+          <div *ngIf="applicationForm.controls['noticePeriod']?.errors?.['required']">Notice Period is required</div>
+        </div>
+      </div>
+      <div>
+        <label for="resume">Resume:</label><br>
+        <input class="input-field" type="file" id="resume" formControlName="resume" required
+          (change)="onFileChange($event)"><br><br>
+        <div *ngIf="isControlInvalid('resume')" class="error-message">
+          <div *ngIf="applicationForm.controls['resume']?.errors?.['required']">Resume is required</div>
+        </div>
+      </div>
+      <!-- <button type="submit" [disabled]="applicationForm.invalid">Submit</button> -->
+      <div id="btn-div">
+        <input type="submit" id="btn" value="Submit" [disabled]="applicationForm.invalid">
+      </div>
+    </form>
+  </div>
+</div>
+<app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer>

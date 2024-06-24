@@ -1,0 +1,91 @@
+<app-a-header></app-a-header>
+<div class="main">
+    <h2>Job Details</h2>
+    <button class="btn-1 btn-primary" (click)="add()">Add</button>
+</div>
+
+<table class="table table-bordered">
+    <thead class="thead-light">
+        <tr>
+            <!-- <th scope="col">Sr.No</th> -->
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Experince</th>
+            <th scope="col">Location</th>
+            
+            <th scope="col">Company Profile</th>
+            <th scope="col">Position</th>
+            <th scope="col">Current Opening</th>
+            <th scope="col">Primary Skill</th>
+            <th scope="col">Work Days</th>
+            <th scope="col">Work Timings</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Educational Qualifications</th>
+            <th scope="col">Role Overview</th>
+            <th scope="col">Required Role Attributes</th>
+            <th scope="col">Required Skills</th>
+            <th scope="col">Additional Skills</th>
+            <th scope="col">Career Path</th>
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let job of jobs">
+            <td>{{ job.id }}</td>
+            <td>{{ job.title }}</td>
+            <td>{{ job.experienceLevel }}</td>
+            <td>{{ job.jobLocation }}</td>
+            <td>{{ job.jobDescription.companyProfile }}</td>
+            <td>{{ job.jobDescription.position }}</td>
+            <td>{{ job.jobDescription.currentOpening }}</td>
+
+            <td>
+              <ul>
+                <li *ngFor="let skill of job.jobDescription.primarySkill">
+                  {{ skill }}
+                </li>
+              </ul>
+            </td>
+            <td>{{ job.jobDescription.workDays }}</td>
+            <td>{{ job.jobDescription.workTimings }}</td>
+            <td>{{ job.jobDescription.salary }}</td>
+            <td>
+              <ul>
+                <li *ngFor="let qualification of job.jobDescription.educationalQualifications">
+                  {{ qualification }}
+                </li>
+              </ul>
+            </td>
+            <td>{{ job.jobDescription.roleOverview }}</td>
+            <td>
+              <ul>
+                <li *ngFor="let attribute of job.jobDescription.requiredRoleAttributes">
+                  {{ attribute }}
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li *ngFor="let skill of job.jobDescription.requiredSkills">
+                  {{ skill }}
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li *ngFor="let skill of job.jobDescription.additionalSkills">
+                  {{ skill }}
+                </li>
+              </ul>
+            </td>
+            <td>{{ job.jobDescription.careerPath }}</td>
+            <td>
+                <div class="action-button">
+                    <button class="btn btn-success" (click)="delete(job.id)">Delete</button>
+                    <button class="btn btn-danger" (click)="updateJob(job.id)">Update</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

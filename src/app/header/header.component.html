@@ -1,0 +1,466 @@
+<div class="main">
+  <!-- hearder section -->
+  <div>
+    <app-main-header></app-main-header>
+  </div>
+  <!-- Popup Box -->
+  <!-- Popup Box -->
+  <app-popup *ngIf="showPopup" (close)="closePopup()"></app-popup>
+
+  <!-- <div class="popup" *ngIf="showPopup"> -->
+  <!-- <h2>Coming soon</h2>
+    <button class="send-btn" (click)="hidePopup()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+        <path
+          d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+      </svg>
+    </button>
+  </div> -->
+
+  <div class="image-contai">
+    <div class="images-wrapp" [class.transition-disabled]="!transitionEnabled"
+      [style.transform]="'translateX(' + -currentIndex * 100 + '%)'">
+      <img *ngFor="let img of Images" [src]="img" alt="" />
+    </div>
+    <button class="scroll-btn left-btn" (click)="scrollLeft()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+        <path fill="none" d="M0 0h24v24H0z" />
+      </svg>
+    </button>
+    <button class="scroll-btn right-btn" (click)="scrollRight()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+        <path fill="none" d="M0 0h24v24H0z" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Carousel Section -->
+  <div>
+    <app-carouselboot></app-carouselboot>
+  </div>
+  <br />
+  <!-- About Us -->
+
+
+  <div class="box-about-us">
+    <div class="content">
+      <h1>We are VS Tech Horizon !</h1>
+      <br />
+      <p>
+        Explore the essence of VS Tech Horizon through our work ethos and vibrant culture,
+        lead by our visionary Director, Mr. Rushikesh Sule. Our dedication to excellence and innovation
+        fuels every facet of our endeavors, from pioneering technology solutions to cultivating a
+        collaborative and inclusive atmosphere. <br> <br>
+        At VS Tech Horizon, we prioritize talent development,
+        faster creativity, and champion diversity, crafting an environment where each individual can
+        flourish. Delve into our work and experience our culture as we forge ahead in shaping the landscape
+        of technology education.
+        <br /><br />
+        Join us on this journey of discovery and innovation!
+      </p>
+
+
+
+      <button class="btn-1" [routerLink]="'/form'">Contact Us</button>
+    </div>
+    <img src="../../assets/blue-toned-set-triangular-paper-sheets-with-copy-space.jpg" alt="" />
+  </div>
+
+  <!-- Courses Section -->
+  <section class="pt-5 pb-5" id="course">
+    <br>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h1 class="mb-5 text-center">Courses</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 d-flex align-items-center">
+          <div id="carouselExampleIndicators1" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-md-4 mb-3 cards">
+                    <div class="card">
+                      <a href="/courses"><img class="img-fluid" alt="100%x300" src="../../assets/phy1.jpg"></a>
+                      <div class="card-body">
+                        <h4 class="card-title text-center"><b>Physics</b></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <a href="/courses"><img class="img-fluid" alt="100%x280" src="../../assets/chem-boy.jpg"></a>
+                      <div class="card-body">
+                        <h4 class="card-title text-center"><b>Chemistry</b></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <a href="/courses"><img class="img-fluid" alt="100%x280" src="../../assets/sci_math4.jpg"></a>
+                      <div class="card-body">
+                        <h4 class="card-title text-center"><b>Biology</b></h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <a href="/courses"><img class="img-fluid" alt="100%x280" src="../../assets/sci_math5.jpg"></a>
+                      <div class="card-body">
+                        <h4 class="card-title text-center"><b>Class 5 - Class 10</b></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <a href="/courses"><img class="img-fluid" alt="100%x280" src="../../assets/sci_math6.jpg"></a>
+                      <div class="card-body">
+                        <h4 class="card-title text-center"><b>Class 11 - Class 12</b></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <a href="/courses"><img class="img-fluid" alt="100%x280" src="../../assets/sci_math7.jpg"></a>
+                      <div class="card-body">
+                        <h4 class="card-title text-center"><b>Above 12</b></h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Previous and Next buttons -->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+              <button class="scroll-btn prev">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                  <path fill="none" d="M0 0h24v24H0z" />
+                </svg>
+              </button>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+              <button class="scroll-btn next">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                  <path fill="none" d="M0 0h24v24H0z" />
+                </svg>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Image -->
+  <!-- <section>
+    <img src="../../assets/img/cloud.jpg" alt="" />
+  </section> -->
+  <!-- Image -->
+  <!-- <section class="img-section" >
+    <img class="img-it-services" src="../../assets/img/Educational services Image.png" alt="IT Services Image" />
+  </section> -->
+
+  <div class="container-wrapper">
+    <div class="image-info__info">
+      <img class="img-it-services" src="../../assets/img/Educational Services image 1.png" alt="IT Services Image" />
+    </div>
+    <div class="container-info">
+      <h4>Unleashing the Future of Technical Education with Bold Innovations!</h4>
+      <h1>We Are Your Comprehensive Education Partner  </h1>
+      <h1> Tailoring Solutions to Your Every Need.</h1>
+      <div class="information">
+        <h4>Our dedication at VS Tech Horizon is to promptly fulfill <br> your  educational  needs, drawing upon our vast network. <br>
+      </h4>
+        <p>"Customize and unleash the potential of every individual involved 
+           in education – educators, institutions, students, parents – within 
+            our innovative and inclusive educational ecosystem, fostering 
+             collaboration, empowerment, and lifelong learning."</p>
+        <button [routerLink]="'/form'">Contact Us
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: #007bff; margin-left:15px; background-color:white ;border-radius:50%">
+            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+          </svg>
+        </button>
+
+        <div class="para">
+          <div class="para-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: navy; ">
+              <path
+                d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+            </svg>
+            <h4>Strengthened by interactive learning.</h4>
+          </div>
+          <div class="para-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: navy;">
+              <path
+                d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+            </svg>
+            <h4>Fueled by expert guidance and projects.</h4>
+          </div>
+          <div class="para-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: navy;">
+              <path
+                d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+            </svg>
+            <h4>Enhanced with peer collaboration and scholarships.</h4>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+ 
+  <!-- Services Section -->
+   
+  <h2 class="h2">Services</h2>
+  <section id="services">
+    <div class="box-carousel">
+      <div class="box-wrapper">
+        <div class="box">
+          <h1 class="h1">Online Services</h1>
+          <div class="box-content">
+            <p>
+              In today's fast-paced world, online services have become an
+              integral part of our daily lives, revolutionizing the way we
+              interact, transact, and consume.
+            </p>
+            <a (click)="scrollToserviceSection('onlineservices')" class="read-more">Read More</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <h1 class="h1">Live Classes And Webinars</h1>
+          <div class="box-content">
+            <p>
+              Live classes and webinars have become increasingly popular in recent years,
+              especially with the rise of digital technology and the shift towards remote learning and working.
+
+            </p>
+            <a (click)="scrollToserviceSection('liveclasses')" class="read-more">Read More</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <h1 class="h1">Tutoring Services</h1>
+          <div class="box-content">
+            <p>
+              Tutoring services provide personalized educational assistance to students of all ages.
+              These services aim to enhance the student's understanding of specific subjects.
+            </p>
+            <a (click)="scrollToserviceSection('tutorialservice')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">Test Preparation Program</h1>
+          <div class="box-content">
+            <p>
+              Test Preparation Program is designed to help individuals prepare for standardized tests, exams,
+              or other assessments. These programs can vary widely depending on the type of test being prepared.
+            </p>
+            <a (click)="scrollToserviceSection('testprepration')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">Educational Services</h1>
+          <div class="box-content">
+            <p>
+              Educational services encompass a diverse range of offerings aimed at facilitating learning,
+              including traditional schooling, online courses, tutoring, and vocational training.
+
+            </p>
+            <a (click)="scrollToserviceSection('educationalresources')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">Customized Learning Plans</h1>
+          <div class="box-content">
+            <p>
+              "Customized learning plans tailor education to individual needs,
+              adapting content and pace to optimize understanding and engagement."
+            </p>
+            <a (click)="scrollToserviceSection('customizedlearning')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">Learning Management System</h1>
+          <div class="box-content">
+            <p>
+              A Learning Management System (LMS) is a software application used to administer, document,
+              track, report, and deliver educational resources. It provides a centralized platform.
+            </p>
+            <a (click)="scrollToserviceSection('lmc')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">Student Support Services</h1>
+          <div class="box-content">
+            <p>
+              "Student Support Services provide academic assistance and resources to ensure student success.
+              From tutoring to counseling, these services aim to address students' various needs and challenges."
+            </p>
+            <a (click)="scrollToserviceSection('studentservices')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">Progress Tracking and Reporting</h1>
+          <div class="box-content">
+            <p>
+              Progress tracking involves monitoring project milestones and tasks to ensure they're completed on
+              schedule. Reporting summarizes this progress, providing insights to stakeholders on project status.
+            </p>
+            <a (click)="scrollToserviceSection('progressreporting')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">Community Engagement</h1>
+          <div class="box-content">
+            <p>
+
+              Community engagement involves active participation and collaboration within a community to address issues
+              and
+              achieve common goals.
+            </p>
+            <a (click)="scrollToserviceSection('community')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">Corporate Training and Professional Development</h1>
+          <div class="box-content">
+            <p>
+              "Corporate training enhances employee skills, fostering professional development and organizational
+              growth."
+            </p>
+            <a (click)="scrollToserviceSection('corporatetraining')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">Partnership and Accreditation</h1>
+          <div class="box-content">
+            <p>
+              Partnership: Collaborative alliances driving innovation and growth.
+              Accreditation: Recognizing excellence through industry-approved standards.
+            </p>
+            <a (click)="scrollToserviceSection('partnerships')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">Diversity and Inclusion Initiatives</h1>
+          <div class="box-content">
+            <p>
+              Diversity and inclusion initiatives aim to create environments where every individual feels valued
+              and respected, regardless of their background, identity, or perspective.
+            </p>
+            <a (click)="scrollToserviceSection('diversity')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">Success Stories and Testimonials</h1>
+          <div class="box-content">
+            <p>
+              "Read inspiring success stories and testimonials from our satisfied clients, showcasing
+              how our products/services have transformed their lives and businesses."
+            </p>
+            <a (click)="scrollToserviceSection('successstories')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">FAQs and Support Documentation</h1>
+          <div class="box-content">
+            <p>
+              "Find answers to commonly asked questions and access comprehensive support documentation to troubleshoot
+              issues effectively."
+              <a (click)="scrollToserviceSection('faq')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">Summer Camps and Workshops</h1>
+          <div class="box-content">
+            <p>
+              "Summer camps and workshops offer exciting opportunities for learning and adventure, catering to
+              diverse interests and ages."
+            </p>
+            <a (click)="scrollToserviceSection('summercamps')" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1">Project Kits and Supplies</h1>
+          <div class="box-content">
+            <p>
+              "Project kits and supplies provide everything you need for hands-on learning and creative endeavors.
+              From DIY crafts to educational experiments, these kits offer convenience and inspiration in a
+              compact package."
+            </p>
+            <a (click)="scrollToserviceSection('projectkits')" class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Information -->
+  <div class="info">
+    <h2><b>Our Partners</b></h2>
+    <div class="logo-container">
+      <div class="logos">
+        <div class="logo-item">
+          <img src="../../assets/img/Arohi.jpg" alt="">
+          <p>Arohi Software</p>
+        </div>
+        <div class="logo-item">
+          <img src="../../assets/img/partner.jpeg" alt="">
+          <p>Ajay Traders</p>
+        </div>
+        <!-- <img src="../../assets/img/download (3).jpg" alt="">
+        <img src="../../assets/img/download.jpg" alt="">
+        <img src="../../assets/img/images (1).png" alt="">
+        <img src="../../assets/img/images.png" alt=""> -->
+      </div>
+    </div>
+
+  </div>
+  <div class="info">
+    <h2><b>Schools/Classes/Colleges Associated with us</b></h2>
+    <div class="logo-container">
+      <div class="logos">
+        <div class="logo-item">
+          <img src="../../assets/img/Subodh Coaching Classes.jpg" alt="">
+          <p>Subodh Coaching Classes</p>
+        </div>
+        <!-- <div class="logo-item">
+          <img src="../../assets/img/partner.jpeg" alt="">
+          <p>Ajay Traders</p>
+        </div> -->
+
+      </div>
+    </div>
+    <button class="btn-8" [routerLink]="'/form'">Contact Us</button>
+  </div>
+  <div>
+    <h2 class="Courses">What Customer Says</h2>
+  </div>
+
+  <!-- Feedback -->
+
+
+  <app-feedback></app-feedback>
+
+
+
+
+</div>
+
+<app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer>

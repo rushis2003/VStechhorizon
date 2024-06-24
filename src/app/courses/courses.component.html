@@ -1,0 +1,146 @@
+<!-- <app-main-header></app-main-header>
+
+<br>
+<h1 class="page-heading">Courses</h1>
+
+<p class="headline" >Tutorials provides in-depth exploration of subjects preparing students for higher education and competitive exams.</p>
+
+<div class="button-container">
+    <button type="button" class="button-container button" (click)="ButtonClick0()" style="cursor: pointer;">5th-10th</button>
+    <button type="button" class="button-container button" (click)="ButtonClick1()" style="cursor: pointer;">11th-12th</button>
+</div>
+
+<div id="11th-12th"  *ngIf = "course_list_value" class="courses-container-1">
+    <div class="box-container"> 
+        <div class="box-1">
+          <img src ="/assets/front-view-young-male-desk-trying-fix-little-construction-purple-wall.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Physics</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+
+      
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-1">
+          <img src ="/assets/sci_math1.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Chemistry</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-1">
+          <img src ="/assets/math1.jpg" alt="courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Math</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-1">
+          <img src ="assets/bio-heart.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Biology</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="button-container" >
+</div>
+<div id="5th-10th"  *ngIf = "!course_list_value" class="courses-container-2">
+    <div class="box-container">
+        <div class="box-2">
+          <img src ="/assets/adorable-young-boy-doing-his-homework.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Class 5</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-2">
+          <img src ="/assets/caucasian-boy-studying-home-by-video-conference-homeschooling.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Class 6</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-2">
+          <img src ="/assets/medium-shot-kid-wearing-spacesuit.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Class 7</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+        </div>
+    </div>
+</div>
+  <div id="5th-10th"  *ngIf = "!course_list_value" class="courses-container-2">
+    <div class="box-container">
+        <div class="box-2">
+          <img src ="/assets/looking-camera-little-schoolboy-sitting-desk-with-school-tools-points-side-isolated-white-background-with-copy-space.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Class 8</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-2">
+          <img src ="/assets/student-digital-art-style-education-day.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Class 9</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-2">
+          <img src ="/assets/sci_math6.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Class 10</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply</button>
+          </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer> -->
+
+
+
+
+
+<app-main-header></app-main-header>
+<div class="popup" *ngIf="showPopup">
+  <h2>Coming soon</h2>
+  <button class="send-btn" (click)="hidePopup()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+      <path
+        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+    </svg>
+  </button>
+</div>
+
+<h2 class="comingsoon" style="margin-top: 120px; margin-left: 20px;">Coming Soon !</h2>
+
+<br><br>
+<app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer>

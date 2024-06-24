@@ -1,0 +1,23 @@
+<!-- <div class="popup-overlay" *ngIf="showPopup">
+  <div class="popup">
+    <button class="popup-close-button" (click)="onClose()">&times;</button>
+    <div *ngIf="popupType === 'text'">
+      <p>{{ popupContent }}</p>
+    </div>
+    <div *ngIf="popupType === 'image'">
+      <img [src]="imageUrl" alt="Popup Image">
+    </div>
+  </div>
+</div> -->
+<div class="popup-overlay" *ngIf="showPopup"(click)="onClose()">
+   <div class="popup">
+     <div *ngIf="popupType === 'text'">
+       <p>{{ popupContent }}</p>
+     </div>
+     <div *ngIf="popupType === 'image'">
+       <!-- <img [src]="http://localhost:3006/{{imageUrl}}" alt="Popup Image"> -->
+       <img [src]="'http://192.168.0.6:3006' + imageUrl" alt="Popup Image">
+       <!-- href="http://localhost:3006{{applicationDetail.resume}}"> -->
+     </div>
+   </div>
+ </div>

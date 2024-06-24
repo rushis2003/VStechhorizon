@@ -1,0 +1,123 @@
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(217, 40, 40);
+  height: 500px;
+}
+
+.images-wrapper {
+  display: flex;
+  overflow: hidden;
+  margin-left: 70px;
+  margin-top: 45px;
+
+}
+
+.image-wrapper {
+  
+  transition: transform 0.3s ease-in-out;
+  margin-right: 12px;
+}
+
+.image-wrapper img {
+  width: 230px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+.image-wrapper img:hover{
+  transform: scale(1.05);
+}
+.image-wrapper:last-child {
+  margin-right: 0; 
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007BFF;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  margin-right: 10px;
+}
+svg {
+  width: 24px;
+  height: 24px;
+  fill: white; 
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+
+/* For devices with width of 1024px and above (desktops) */
+@media only screen and (min-width: 1025px) {
+  .images-wrapper {
+    margin-left: 70px;
+    margin-top: 45px;
+  }
+  .image-wrapper img {
+    width: 230px;
+    height: 300px;
+    margin-top: 50px;
+  }
+}
+
+/* For tablets (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .images-wrapper {
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+  .image-wrapper img {
+    width: 200px;
+    height: 260px;
+    margin-top: 40px;
+  }
+  .btn {
+    width: 40px;
+    height: 40px;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* For mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+  .carousel {
+    height: 300px;
+  }
+  .images-wrapper {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .image-wrapper img {
+    width: 150px;
+    height: 200px;
+    margin-top: 20px;
+  }
+  .btn {
+    width: 30px;
+    height: 30px;
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}

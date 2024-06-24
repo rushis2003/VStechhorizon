@@ -1,0 +1,358 @@
+<app-main-header></app-main-header>
+
+<h2>Add Form</h2>
+<!-- <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <div class="form-row">
+            <label for="id">ID:</label>
+            <input id="id" formControlName="id">
+            <div *ngIf="addForm.controls['id'].invalid && (addForm.controls['id'].dirty || addForm.controls['id'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['id'].errors?.['required']">Id is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="title">Title:</label>
+            <input id="title" formControlName="title">
+            <div *ngIf="addForm.controls['title'].invalid && (addForm.controls['title'].dirty || addForm.controls['title'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['title'].errors?.['required']">Title is required</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="form-row">
+            <label for="experience">Experience:</label>
+            <input id="experience" formControlName="experience">
+            <div *ngIf="addForm.controls['experience'].invalid && (addForm.controls['experience'].dirty || addForm.controls['experience'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['experience'].errors?.['required']">Experience is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="profile">Profile:</label>
+            <input id="profile" formControlName="profile">
+            <div *ngIf="addForm.controls['profile'].invalid && (addForm.controls['profile'].dirty || addForm.controls['profile'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['profile'].errors?.['required']">Profile is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="position">Position:</label>
+            <input id="position" formControlName="position">
+            <div *ngIf="addForm.controls['position'].invalid && (addForm.controls['position'].dirty || addForm.controls['position'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['position'].errors?.['required']">Position is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="opening">Opening:</label>
+            <input id="opening" formControlName="opening">
+            <div *ngIf="addForm.controls['opening'].invalid && (addForm.controls['opening'].dirty || addForm.controls['opening'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['opening'].errors?.['required']">Opening is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="experienceLevel">Experience Level:</label>
+            <input id="experienceLevel" formControlName="experienceLevel">
+            <div *ngIf="addForm.controls['experienceLevel'].invalid && (addForm.controls['experienceLevel'].dirty || addForm.controls['experienceLevel'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['experienceLevel'].errors?.['required']">Experience is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="skill">Skill:</label>
+            <input id="skill" formControlName="skill">
+            <div *ngIf="addForm.controls['skill'].invalid && (addForm.controls['skill'].dirty || addForm.controls['skill'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['skill'].errors?.['required']">Skill is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="location">Location:</label>
+            <input id="location" formControlName="location">
+            <div *ngIf="addForm.controls['location'].invalid && (addForm.controls['location'].dirty || addForm.controls['location'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['location'].errors?.['required']">Location is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="workDay">Work Day:</label>
+            <input id="workDay" formControlName="workDay">
+            <div *ngIf="addForm.controls['workDay'].invalid && (addForm.controls['workDay'].dirty || addForm.controls['workDay'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['workDay'].errors?.['required']">Work Day is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="time">Time:</label>
+            <input id="time" formControlName="time">
+            <div *ngIf="addForm.controls['time'].invalid && (addForm.controls['time'].dirty || addForm.controls['time'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['time'].errors?.['required']">Time is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="salary">Salary:</label>
+            <input id="salary" formControlName="salary">
+            <div *ngIf="addForm.controls['salary'].invalid && (addForm.controls['salary'].dirty || addForm.controls['salary'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['salary'].errors?.['required']">Salary is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="qualification">Qualification:</label>
+            <input id="qualification" formControlName="qualification">
+            <div *ngIf="addForm.controls['qualification'].invalid && (addForm.controls['qualification'].dirty || addForm.controls['qualification'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['qualification'].errors?.['required']">Qualification is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="roleOverview">Role Overview:</label>
+            <textarea id="roleOverview" formControlName="roleOverview"></textarea>
+            <div *ngIf="addForm.controls['roleOverview'].invalid && (addForm.controls['roleOverview'].dirty || addForm.controls['roleOverview'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['roleOverview'].errors?.['required']">Role Overview is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="roleAttribute">Role Attribute:</label>
+            <textarea id="roleAttribute" formControlName="roleAttribute"></textarea>
+            <div *ngIf="addForm.controls['roleAttribute'].invalid && (addForm.controls['roleAttribute'].dirty || addForm.controls['roleAttribute'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['roleAttribute'].errors?.['required']">Role Attribute is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="requiredSkill">Required Skill:</label>
+            <input id="requiredSkill" formControlName="requiredSkill">
+            <div *ngIf="addForm.controls['requiredSkill'].invalid && (addForm.controls['requiredSkill'].dirty || addForm.controls['requiredSkill'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['requiredSkill'].errors?.['required']">Required Skill is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="additionalSkill">Additional Skill:</label>
+            <input id="additionalSkill" formControlName="additionalSkill">
+            <div *ngIf="addForm.controls['additionalSkill'].invalid && (addForm.controls['additionalSkill'].dirty || addForm.controls['additionalSkill'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['additionalSkill'].errors?.['required']">Additional Skill is required</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="path">Path:</label>
+            <input id="path" formControlName="path">
+            <div *ngIf="addForm.controls['path'].invalid && (addForm.controls['path'].dirty || addForm.controls['path'].touched)"
+                class="error">
+                <div *ngIf="addForm.controls['path'].errors?.['required']">Path is required</div>
+            </div>
+        </div>
+
+    </div>
+    <button type="submit" [disabled]="addForm.invalid">Update</button>
+</form> -->
+
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+
+
+    <div>
+    <label for="title">Title:</label>
+    <input id="title" formControlName="title">
+    <div *ngIf="addForm.get('title')?.touched && addForm.get('title')?.hasError('required')">
+      <small>Title is required.</small>
+    </div>
+
+  </div>
+
+  <div>
+    <label for="experienceLevel">Experience Level:</label>
+    <input id="experienceLevel" formControlName="experienceLevel">
+    <div *ngIf="addForm.get('experienceLevel')?.touched && addForm.get('experienceLevel')?.hasError('required')">
+      <small>Experience Level is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="jobLocation">Job Location:</label>
+    <input id="jobLocation" formControlName="jobLocation">
+    <div *ngIf="addForm.get('jobLocation')?.touched && addForm.get('jobLocation')?.hasError('required')">
+      <small>Job Location is required.</small>
+    </div>
+  </div>
+
+  <div formGroupName="jobDescription">
+    <div>
+      <label for="companyProfile">Company Profile:</label>
+      <input id="companyProfile" formControlName="companyProfile">
+      <div
+        *ngIf="addForm.get('jobDescription')?.get('companyProfile')?.touched && addForm.get('jobDescription')?.get('companyProfile')?.hasError('required')">
+        <small>Company Profile is required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="position">Position:</label>
+      <input id="position" formControlName="position">
+      <div
+        *ngIf="addForm.get('jobDescription')?.get('position')?.touched && addForm.get('jobDescription')?.get('position')?.hasError('required')">
+        <small>Position is required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="currentOpening">Current Opening:</label>
+      <input id="currentOpening" formControlName="currentOpening">
+      <div
+        *ngIf="addForm.get('jobDescription')?.get('currentOpening')?.touched && addForm.get('jobDescription')?.get('currentOpening')?.hasError('required')">
+        <small>Current Opening is required. and it shuld be in digit</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="primarySkill">Primary Skill:</label>
+      <input id="primarySkill" formControlName="primarySkill">
+      <div
+        *ngIf="addForm.get('jobDescription')?.get('primarySkill')?.touched && addForm.get('jobDescription')?.get('primarySkill')?.hasError('required')">
+        <small>Primary Skill is required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="workDays">Work Days:</label>
+      <input id="workDays" formControlName="workDays">
+      <div
+        *ngIf="addForm.get('jobDescription')?.get('workDays')?.touched && addForm.get('jobDescription')?.get('workDays')?.hasError('required')">
+        <small>Work Days are required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="workTimings">Work Timings:</label>
+      <input id="workTimings" formControlName="workTimings">
+      <div
+        *ngIf="addForm.get('jobDescription')?.get('workTimings')?.touched && addForm.get('jobDescription')?.get('workTimings')?.hasError('required')">
+        <small>Work Timings are required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="salary">Salary:</label>
+      <input id="salary" formControlName="salary">
+      <div
+        *ngIf="addForm.get('jobDescription')?.get('salary')?.touched && addForm.get('jobDescription')?.get('salary')?.hasError('required')">
+        <small>Salary is required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="educationalQualifications">Educational Qualifications:</label>
+      <input id="educationalQualifications" formControlName="educationalQualifications">
+      <div
+        *ngIf="addForm.get('jobDescription')?.get('educationalQualifications')?.touched && addForm.get('jobDescription')?.get('educationalQualifications')?.hasError('required')">
+        <small>Educational Qualifications are required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="roleOverview">Role Overview:</label>
+      <input id="roleOverview" formControlName="roleOverview">
+      <div
+        *ngIf="addForm.get('jobDescription')?.get('roleOverview')?.touched && addForm.get('jobDescription')?.get('roleOverview')?.hasError('required')">
+        <small>Role Overview is required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="requiredRoleAttributes">Required Role Attributes:</label>
+      <input id="requiredRoleAttributes" formControlName="requiredRoleAttributes">
+      <div
+        *ngIf="addForm.get('jobDescription')?.get('requiredRoleAttributes')?.touched && addForm.get('jobDescription')?.get('requiredRoleAttributes')?.hasError('required')">
+        <small>Required Role Attributes are required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="requiredSkills">Required Skills:</label>
+      <input id="requiredSkills" formControlName="requiredSkills">
+      <div
+        *ngIf="addForm.get('jobDescription')?.get('requiredSkills')?.touched && addForm.get('jobDescription')?.get('requiredSkills')?.hasError('required')">
+        <small>Required Skills are required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="additionalSkills">Additional Skills:</label>
+      <input id="additionalSkills" formControlName="additionalSkills">
+      <div
+        *ngIf="addForm.get('jobDescription')?.get('additionalSkills')?.touched && addForm.get('jobDescription')?.get('additionalSkills')?.hasError('required')">
+        <small>Additional Skills are required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="careerPath">Career Path:</label>
+      <input id="careerPath" formControlName="careerPath">
+      <div
+        *ngIf="addForm.get('jobDescription')?.get('careerPath')?.touched && addForm.get('jobDescription')?.get('careerPath')?.hasError('required')">
+        <small>Career Path is required.</small>
+      </div>
+    </div>
+
+  </div>
+  <br>
+  <button type="submit" [disabled]="addForm.invalid">Add Job Opening</button>
+
+</form>
+<app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer>

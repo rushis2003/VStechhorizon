@@ -1,0 +1,108 @@
+<app-main-header></app-main-header>
+
+<div class="main">
+  <h1>Terms and Conditions</h1>
+
+  <div class="term">
+    <label>
+      <input type="checkbox" [(ngModel)]="accepted" [disabled]="!showCheckbox"> Accept
+    </label>
+    <br>
+    <button class="btn btn-primary" (click)="openPopup()">Accept and Continue</button>
+    <button class="btn btn-primary" [disabled]="!accepted" (click)=" navigateToPayment()">Next</button>
+  </div>
+
+  <div *ngIf="showPopup" class="popup">
+    <div class="popup-content">
+      <h2>Terms and Conditions</h2>
+      <div><strong>Refund Policy for Exams:</strong> In the event that we are unable to conduct the exam, any payment
+        made
+        will be refunded in full. Refund requests must be submitted within 30 days of the cancellation notice.
+        Processing time
+        for refunds will be approximately 14 business days. To ensure a smooth refund process, please provide your
+        WhatsApp
+        number during the registration.</div>
+      <div><strong>Eligibility:</strong> Participants must meet all the eligibility criteria as specified in the exam
+        announcement,
+        which include being enrolled in a B.E., B.Tech, or diploma program. Verification of eligibility may be required,
+        and failure
+        to meet these criteria will result in disqualification without a refund of the registration fee.</div>
+      <div><strong>Registration:</strong> All participants must complete the registration process by the specified
+        deadline,
+        which includes filling out the registration form accurately, submitting required documents, and paying the
+        registration
+        fee. Late registrations will not be accepted under any circumstances. Registration fees are non-transferable and
+        non-
+        refundable after successful registration</div>
+      <div><strong>Updates:</strong> Candidates are required to visit the official VS Tech Horizon website and check
+        their email
+        (including spam/junk folders) regularly for important updates and announcements related to the exam. VS Tech
+        Horizon
+        will not be responsible for any missed communications due to incorrect email settings or failure to check email
+        regularly.</div>
+      <div><strong>Online Exam Platform:</strong> The Scholarship Exam will be conducted entirely online. Candidates
+        must ensure
+        they have a reliable internet connection and a suitable device (computer, laptop, or tablet) to participate in
+        the
+        exam. It is the candidate’s responsibility to ensure their equipment meets the technical requirements specified
+        by VS
+        Tech Horizon.</div>
+      <div><strong>Cheating and Academic Integrity:</strong> Cheating of any kind is strictly prohibited during the
+        Scholarship Exam. This includes but is not limited to using unauthorized materials, copying from others, or
+        allowing
+        others to copy from you. The Scholarship Exam Board of Directors will ensure that the integrity of the exam is
+        maintained and that results reflect the true performance of the candidates. Any candidate found cheating will be
+        immediately disqualified and may face further disciplinary actions.</div>
+      <div><strong>Prohibition of Proxy Test Taking:</strong> Under no circumstances should a candidate attempt to take
+        the
+        Scholarship Exam on behalf of someone else, nor should they allow someone else to take the exam on their behalf.
+        If a candidate is unable to take the Scholarship Exam on the specified date for any reason, there will be no
+        rescheduling of the exam. Attempts to violate this policy will result in disqualification and potential legal
+        action.</div>
+      <div><strong>Rescheduling Policy:</strong> Rescheduling of the exam date will be allowed only in exceptional
+        circumstances and solely at the discretion of VS Tech Horizon. Candidates will be notified in advance if a
+        reschedule is necessary. No individual rescheduling requests will be entertained.</div>
+      <div><strong>Data Privacy:</strong> All personal information collected during the registration process will be used
+        solely for the purpose of administering the Scholarship Exam and related activities. VS Tech Horizon is
+        committed
+        to protecting the privacy of all candidates and will handle personal information in accordance with applicable
+        data protection laws.</div>
+      <div><strong>Exam Conduct:</strong> Candidates are expected to adhere to the exam conduct guidelines provided
+        prior to the exam date. This includes maintaining a quiet and orderly environment during the exam. Disruptive
+        behavior or failure to follow the guidelines may result in disqualification.</div>
+      <div><strong>Disqualification:</strong> Any breach of these terms and conditions may result in disqualification
+        from the Scholarship Exam without refund. This includes, but is not limited to, cheating, providing false
+        information during registration, and disruptive behavior during the exam.</div>
+      <div><strong>Continued Learning Opportunities:</strong> If a candidate is not selected for the scholarship,
+        they are encouraged to continue growing their knowledge with VS Tech Horizon. We offer various learning
+        resources, courses, and career guidance to support all students in their educational and professional
+        development.</div>
+      <div><strong>Payment Information:</strong> All payments for the registration fee must be made to the VS
+        Tech Horizon Private Limited official account only. Payments made to any other account will not be
+        accepted and may result in unsuccessful registration. Please ensure you follow the payment instructions
+        provided during the registration process.</div>
+      <div><strong>Changes to Terms and Conditions:</strong> VS Tech Horizon reserves the right to modify these
+        terms and conditions at any time. Any changes will be communicated to registered candidates via email
+        and the official website. Continued participation in the Scholarship Exam will be deemed as acceptance
+        of any revised terms and conditions.</div>
+        <div><strong>Liability:</strong> VS Tech Horizon shall not be liable for any direct, indirect, incidental, or
+           consequential damages resulting from participation in the Scholarship Exam. This includes any issues related to
+            technical failures, loss of data, or other unforeseen events.</div>
+            <div><strong>Contact Information:</strong> For any queries or issues related to the Scholarship Exam, candidates
+               can contact VS Tech Horizon at:
+              Email: vstechhorizonscholarship@gmail.com
+              Phone: +91 9325360357</div>
+      <div class="pop">
+        <button class="btn btn-primary" (click)="closePopup()">Close</button>
+        <button class="btn btn-primary" (click)="acceptTermsInPopup()">Accept</button>
+      </div>
+
+      <!-- <button class="btn btn-primary" (click)="closePopup()">Close</button>
+      <button class="btn btn-primary" (click)="acceptTermsInPopup()">Accept</button> -->
+
+    </div>
+  </div>
+</div>
+<app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer>

@@ -1,0 +1,29 @@
+<app-a-header></app-a-header>
+<div>
+    <h2>Contact</h2>
+</div>
+
+<table class="table table-bordered">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Contact Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Message</th>
+            <th scope="col">Submit Date & Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let conatact of contacts">
+            <th>{{conatact.contactId}}</th>
+            <td>{{ conatact.name }}</td>
+            <td>{{conatact.email }}</td>
+            <td>{{conatact.phone }}</td>
+            <td>{{conatact.subject }}</td>
+            <td>{{conatact.message }}</td>
+            <td>{{conatact.submitDate}}</td>
+        </tr>
+    </tbody>
+</table>

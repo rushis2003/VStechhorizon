@@ -1,0 +1,96 @@
+
+<app-main-header></app-main-header>
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3782.0054602462387!2d74.00712817423874!3d18.
+5737925675482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sH2F5%2BGV8%20%26%20Kesnand%2C%20Pune%2C%20Maharashtra%20411014!5e0!3m2!1sen!2sin!4v1716900933416!5m2!1sen!2sin"
+ width="100%" height="550" style="margin-top: 70px; border: 0;" allowfullscreen="" loading="lazy" 
+ referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+ 
+ <div class="container-wrapper"> 
+  <div class="contact-panel__info " >
+    <div class="contact-block">
+      <h5 class="contact-block__title">Our Location</h5>
+      <ul class="contact-block__list list-unstyled">
+        <li>H2F5+GV8 &amp; Kesnand, Pune, Maharashtra 411014</li>
+      </ul>
+    </div>
+    <div class="contact-block">
+      <h5 class="contact-block__title">Quick Contact</h5>
+      <ul class="contact-block__list list-unstyled">
+        <li><a href="mailto:info@phntechnology.com" class="mail_href"></a>Email: hr@vstechhorizon.com</li>
+        <li><a href="mailto:info@phntechnology.com" class="mail_href"></a>Support: hr@vstechhorizon123.com</li>
+      </ul>
+    </div>
+    <div class="contact-block">
+      <h5 class="contact-block__title">Opening Hours</h5>
+      <ul class="contact-block__list list-unstyled">
+        <li>Monday - Friday</li>
+        <li>10:00 AM - 07:00 PM</li>
+      </ul>
+    </div>
+    <p class="color-white mb-20">If you have any questions or need help, feel free to contact with our team.</p>
+    <a href="tel:1800 209 2288" class="phone-number"></a>
+  </div>
+
+  <div class="container">
+    <h1><b>Get In Touch</b></h1>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-sm-6">
+          <input id="name" formControlName="name" placeholder="Name">
+          <div *ngIf="contactForm.get('name')?.errors?.['required'] && contactForm.get('name')?.touched" class="error-message">
+            Name is required
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <input id="email" formControlName="email" placeholder="Email">
+          <div *ngIf="contactForm.get('email')?.errors?.['required'] && contactForm.get('email')?.touched" class="error-message">
+            Email is required
+          </div>
+          <div *ngIf="contactForm.get('email')?.errors?.['email'] && contactForm.get('email')?.touched" class="error-message">
+            Please enter a valid email address
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-sm-6">
+          <input id="phone" formControlName="phone" placeholder="Phone-number">
+          <div *ngIf="contactForm.get('phone')?.errors?.['required'] && contactForm.get('phone')?.touched" class="error-message">
+            Phone number is required
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <input id="subject" formControlName="subject" placeholder="Subject">
+          <div *ngIf="contactForm.get('sub')?.errors?.['required'] && contactForm.get('sub')?.touched" class="error-message">
+            Subject is required
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <textarea id="message" formControlName="message" placeholder="Message" rows="5"></textarea>
+        <div *ngIf="contactForm.get('message')?.errors?.['required'] && contactForm.get('message')?.touched" class="error-message">
+          Message is required
+        </div>
+      </div>
+      <div class="button-container">
+        <button type="submit"[disabled]="!contactForm.valid">Submit</button>
+      </div>
+    </form>
+  </div>
+</div> 
+  
+
+<app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+
+<app-footer></app-footer>
+
+
+
+
