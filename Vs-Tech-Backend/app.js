@@ -24,7 +24,7 @@ app.use('/paymentSleep', express.static('paymentSleep'));
 app.use('/markSheet', express.static('markSheet'));
 app.use('/popUpImage', express.static('popUpImage'));
 app.use(cors({
-    origin: 'http://192.168.0.6:4200' // Replace with your frontend URL
+    origin: 'http://192.168.0.3:4200' // Replace with your frontend URL
   }));
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
